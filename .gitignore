@@ -10,6 +10,11 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+# Never ignore Asset meta data
+!DeleteMeDemo/ [Aa] ssets / **/*.meta
+
+C:\Users\ldsul\OneDrive\Documents\GitHub\KernmoduleHorrorgame
+
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
