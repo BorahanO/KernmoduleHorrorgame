@@ -7,37 +7,43 @@ public class FollowPlayer : MonoBehaviour
 {
     InCameraDetector cameradetector;
 
-    public NavMeshAgent agent;
-    public GameObject player;
-    public GameObject Person;
-    Vector3 playerloc;
-    Vector3 personloc;
+
+    public AnnaMariaKoekoek AMK;
+
+    public NavMeshAgent Passagier;
+    Vector3 PassagierLoc; 
+    public Transform PlayerTarget;
+    public Transform NewPassagierLoc;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerloc = player.transform.position;
-        personloc = Person.transform.position;
+        GetComponent<FollowPlayer>().enabled = false;
+        PassagierLoc.Set(NewPassagierLoc.position.x, NewPassagierLoc.position.y, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        var playerloc = PlayerTarget.position;
         cameradetector = GetComponent<InCameraDetector>();
-       
-        // hieronder gaat de passagier de speler achterna 
-        // De locatie van de speler wordt nog niet geupdate, voor nu nog niet heel belangrijk
 
-        if (cameradetector.insight == false)
+
+        if(AMK.PessengerIsComing == true)
         {
-            agent.SetDestination(playerloc);
+            
         }
 
-        if(cameradetector.insight == true)
-        {   
-            agent.SetDestination(personloc);
+        if (cameradetector.insight == true)
+        {
+            Passagier.SetDestination(playerloc);
         }
+
+        if(cameradetector.insight == false)
+        {
+            Passagier.SetDestination(NewPassagierLoc.transform.position);
+        }
+    }
 
     }
-}
+
