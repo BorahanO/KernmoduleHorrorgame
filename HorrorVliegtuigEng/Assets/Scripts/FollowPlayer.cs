@@ -9,41 +9,82 @@ public class FollowPlayer : MonoBehaviour
 
 
     public AnnaMariaKoekoek AMK;
+    public InCameraDetector ID;
 
     public NavMeshAgent Passagier;
-    Vector3 PassagierLoc; 
+    public GameObject PassengerLoc;
     public Transform PlayerTarget;
-    public Transform NewPassagierLoc;
+
+    Rigidbody m_Rigidbody;
+
+
+    bool ImAllowdToFollow = true;
+
+
+
+    int timer = 0;
+    bool resetTimer= false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        m_Rigidbody = GetComponent<Rigidbody>();
         GetComponent<FollowPlayer>().enabled = false;
-        PassagierLoc.Set(NewPassagierLoc.position.x, NewPassagierLoc.position.y, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(ID.insight);
+
         var playerloc = PlayerTarget.position;
+        var Pessengerloc = PassengerLoc.transform.position;
         cameradetector = GetComponent<InCameraDetector>();
 
-
-        if(AMK.PessengerIsComing == true)
+        if (ImAllowdToFollow == false)
         {
-            
+            Passagier.SetDestination(Pessengerloc);
         }
 
-        if (cameradetector.insight == true)
+        if (ImAllowdToFollow == true)
         {
-            Passagier.SetDestination(playerloc);
+            if (ID.insight == false)
+            {
+                Passagier.SetDestination(playerloc);
+
+            }
+
+            if (ID.insight == true)
+            {
+
+                Passagier.SetDestination(Pessengerloc);
+
+            }
         }
 
-        if(cameradetector.insight == false)
+
+        if (GetComponent<FollowPlayer>().enabled == true)
         {
-            Passagier.SetDestination(NewPassagierLoc.transform.position);
+            if (resetTimer == false)
+            {
+                timer++;
+            }
+            if (timer > AMK.ImAllowdToFollowtime)
+            {
+                ImAllowdToFollow = false;
+
+                  if(ImAllowdToFollow == false)
+                  {
+                    timer = 0;
+                    resetTimer = true;
+                  }   
+            }
         }
     }
 
-    }
+
+
+}
+
 
