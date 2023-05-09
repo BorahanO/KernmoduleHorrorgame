@@ -26,6 +26,7 @@ public class InCameraDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(insight);
         // als gameobject is camera zicht is dan gaat er een boolean aan of uit
         // dit werkt blijkbaar alleen met meshrenderer of kleur ofzo 
         // maar alleen een boolean heeft hij blijkbaar problemen. 
