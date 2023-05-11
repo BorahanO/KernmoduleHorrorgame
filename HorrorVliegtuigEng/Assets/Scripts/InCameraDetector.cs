@@ -11,13 +11,15 @@ public class InCameraDetector : MonoBehaviour
     Collider collider;
     public bool insight = true;
 
-
-    AnnaMariaKoekoek AMK;
+    PessengerBehaviour PB;
 
     // Start is called before the first frame update
     void Start()
     {
-        AMK = GetComponent<AnnaMariaKoekoek>();
+
+
+
+        PB = GetComponent<PessengerBehaviour>();
         renderer = GetComponent<MeshRenderer>();
         collider = GetComponent<Collider>();
         
@@ -26,7 +28,7 @@ public class InCameraDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(insight);
+        //Debug.Log(insight);
         // als gameobject is camera zicht is dan gaat er een boolean aan of uit
         // dit werkt blijkbaar alleen met meshrenderer of kleur ofzo 
         // maar alleen een boolean heeft hij blijkbaar problemen. 
@@ -42,4 +44,6 @@ public class InCameraDetector : MonoBehaviour
            insight = false;
         }
     }
+
+    
 }

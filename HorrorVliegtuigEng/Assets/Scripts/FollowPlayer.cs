@@ -8,15 +8,12 @@ public class FollowPlayer : MonoBehaviour
     InCameraDetector cameradetector;
 
 
-    public AnnaMariaKoekoek AMK;
+    public PessengerBehaviour PB;
     public InCameraDetector ID;
 
     public NavMeshAgent Passagier;
     public GameObject PassengerLoc;
     public Transform PlayerTarget;
-
-    Rigidbody m_Rigidbody;
-
 
     bool ImAllowdToFollow = true;
 
@@ -29,8 +26,7 @@ public class FollowPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_Rigidbody = GetComponent<Rigidbody>();
-        GetComponent<FollowPlayer>().enabled = false;
+              GetComponent<FollowPlayer>().enabled = false;
     }
 
     // Update is called once per frame
@@ -42,45 +38,44 @@ public class FollowPlayer : MonoBehaviour
         var Pessengerloc = PassengerLoc.transform.position;
         cameradetector = GetComponent<InCameraDetector>();
 
-        if (ImAllowdToFollow == false)
-        {
-            Passagier.SetDestination(Pessengerloc);
-        }
-
+        
         if (ImAllowdToFollow == true)
         {
             if (ID.insight == false)
             {
-                Passagier.SetDestination(playerloc);
+               // Passagier.SetDestination(playerloc);
 
             }
 
             if (ID.insight == true)
             {
-
-                Passagier.SetDestination(Pessengerloc);
-
-            }
-        }
-
-
-        if (GetComponent<FollowPlayer>().enabled == true)
-        {
-            if (resetTimer == false)
-            {
                 timer++;
-            }
-            if (timer > AMK.ImAllowdToFollowtime)
-            {
-                ImAllowdToFollow = false;
 
-                  if(ImAllowdToFollow == false)
-                  {
-                    timer = 0;
-                    resetTimer = true;
-                  }   
+                if (timer >= 200)
+                {
+                    Passagier.SetDestination(Pessengerloc);
+                }
             }
         }
+
+
+      //  if (GetComponent<FollowPlayer>().enabled == true)
+       // {
+       //     if (resetTimer == false)
+      //      {
+       //         timer++;
+      //      }
+      //      if (timer > AMK.ImAllowdToFollowtime)
+      //      {
+      //          ImAllowdToFollow = false;
+
+     //             if(ImAllowdToFollow == false)
+     //             {
+      //              timer = 0;
+      //              resetTimer = true;
+     //             }   
+     //       }
+     //   }
     }
 
 
