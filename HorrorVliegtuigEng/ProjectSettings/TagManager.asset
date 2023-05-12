@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pessenger
   - PessengerSeat
+  - passenger
   layers:
   - Default
   - TransparentFX

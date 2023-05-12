@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class LookAtPlayer : MonoBehaviour
 {
-    public Transform player;
+    public Transform playerTransform;
+    public GameObject player;
     public bool lookAt = false;
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerTransform = player.transform;
     }
 
     void Update()
     {
         if (lookAt == true) 
         {
-            transform.LookAt(player);
+            transform.LookAt(playerTransform);
         } 
         else
         {
