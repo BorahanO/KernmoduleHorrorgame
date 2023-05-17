@@ -13,22 +13,27 @@ public class DubbleCheckInsight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Log("inside2" + insight2);
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Pessenger")
+
+        if (other.gameObject.tag == "Pessenger")
         {
-            Debug.Log("hallo");
+            other.gameObject.GetComponent<InCameraDetector>().insight2 = true;
         }
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Pessenger")
+
+        if (other.gameObject.tag == "Pessenger")
         {
-            Debug.Log("hallo");
+            other.gameObject.GetComponent<InCameraDetector>().insight2 = false;
         }
+
     }
 }
