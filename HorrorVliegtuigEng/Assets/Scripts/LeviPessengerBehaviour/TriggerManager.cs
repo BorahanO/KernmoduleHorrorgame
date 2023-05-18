@@ -81,20 +81,37 @@ public class TriggerManager : MonoBehaviour
 
         if (jumpscareIsTriggerd == true)
         { 
-            PessengerJumpscaretrigger();
+            PessengerLocationSpawner();
         }
 
 
         //  Debug.Log("triggerCount" + TriggerCount);
     }
 
-    public void PessengerJumpscaretrigger()
+    public void PessengerLocationSpawner()
     {
-        GameObject SpawnLocation = GameObject.FindWithTag("SpawnLocation");
 
-        Vector3 SpawnDistance = new Vector3(0, 0, 0);
-        Instantiate(PrefabPessenger, SpawnLocation.transform.TransformPoint(SpawnDistance), rotation);
-        jumpscareIsTriggerd = false;
+        // Hieronder spawned hij m naar de gewenste locatie die je hierboven aangegeven hebt
+        if (TriggerCount <= 2)
+        {
+            GameObject SpawnLocation = GameObject.FindWithTag("SpawnLocation");
+
+            Vector3 SpawnDistance = new Vector3(0, 0, 0);
+            Instantiate(PrefabPessenger, SpawnLocation.transform.TransformPoint(SpawnDistance), rotation);
+            jumpscareIsTriggerd = false;
+        }
+
+        // Per trigger gaat er een count omhoog, hieronder kan je aangeven bij welke trigger hij achter de speler spawned
+        // je kunt aangeven bij de ifstatement bij welke trigger dat gebeurd
+
+        if (TriggerCount == 3)
+        {
+            var SpawnLocation = PlayerTarget.transform.position;
+
+            Vector3 SpawnDistance = new Vector3(0, 0, 0);
+            Instantiate(PrefabPessenger, SpawnLocation, rotation);
+            jumpscareIsTriggerd = false;
+        }
     }
 
 }
