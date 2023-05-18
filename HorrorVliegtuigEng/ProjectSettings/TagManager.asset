@@ -8,6 +8,8 @@ TagManager:
   - ProgressQuest
   - PessengerSeat
   - Pessenger
+  - SpawnLocation
+  - passenger
   layers:
   - Default
   - TransparentFX

@@ -5,12 +5,12 @@ using UnityEngine;
 public class JumpScareTrigger : MonoBehaviour
 {
     public bool jumpscareIsTriggerd;
-    public GameObject SpawnLocation;
+    public TriggerManager TM;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -24,6 +24,8 @@ public class JumpScareTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        jumpscareIsTriggerd = true;
+        Debug.Log(other);
+        TM.jumpscareIsTriggerd = true;
+        TM.TriggerCount++;
     }
 }
