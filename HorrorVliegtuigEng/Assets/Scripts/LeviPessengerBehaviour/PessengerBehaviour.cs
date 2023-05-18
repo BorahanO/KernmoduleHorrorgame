@@ -10,12 +10,13 @@ public class PessengerBehaviour : MonoBehaviour
     public int NewPassengerWillStandUpTime;
     public bool PessengerIsComing = false;
 
-    public int ImAllowdToFollowtime = 500;
-
     public int HowManyPeopleCanWalk = 1;
 
     public List<GameObject> Pessengers;
 
+    public List<GameObject> SpawnLocaties;
+
+    public int SpawnlocationNumber;
     public Transform PlayerTarget;
     Vector3 SpawnDistance = new Vector3(0, 0.5f, -1);
     
@@ -38,8 +39,14 @@ public class PessengerBehaviour : MonoBehaviour
     {
         pessengerIsComing();
 
-        
+        Debug.Log(SpawnlocationNumber);
 
+        if(jumpscaretrigger.jumpscareIsTriggerd == true)
+        {
+            SpawnlocationNumber++;
+            PessengerJumpscaretrigger();
+            jumpscaretrigger.jumpscareIsTriggerd = false;
+        }
     }
 
 
@@ -53,10 +60,10 @@ public class PessengerBehaviour : MonoBehaviour
 
         chosenPessenger.GetComponent<FollowPlayer>().enabled = true;
         // Return the game object at the chosen index
-        if (jumpscaretrigger.jumpscareIsTriggerd == true)
-        {
-            chosenPessenger.transform.position = new Vector3(PlayerTarget.position.x, PlayerTarget.position.y, PlayerTarget.position.z);
-        }
+
+        Vector3 SpawnDistance = new Vector3(0, 0, 0);
+
+        chosenPessenger.transform.position = jumpscaretrigger.SpawnLocation.transform.TransformPoint(SpawnDistance);
         return Pessengers[index];
     }
 

@@ -25,20 +25,17 @@ public class InCameraDetector : MonoBehaviour
         PB = GetComponent<PessengerBehaviour>();
         renderer = GetComponent<MeshRenderer>();
         collider = GetComponent<Collider>();
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-      
-     
-        if(insight == true)
+        if (insight == true)
         {
             renderer.sharedMaterial.color = Color.green;
         }
 
-        if(insight == false)
+        if (insight == false)
         {
             renderer.sharedMaterial.color = Color.red;
         }
@@ -53,21 +50,18 @@ public class InCameraDetector : MonoBehaviour
         // maar alleen een boolean heeft hij blijkbaar problemen. 
 
         var bounds = collider.bounds;
-        cameraFrustum = GeometryUtility.CalculateFrustumPlanes(camera); 
+        cameraFrustum = GeometryUtility.CalculateFrustumPlanes(camera);
         if (GeometryUtility.TestPlanesAABB(cameraFrustum, bounds))
         {
-            
+
             insight = true;
         }
         else
         {
-          
             if (insight2 == false)
             {
                 insight = false;
             }
         }
     }
-
-    
 }

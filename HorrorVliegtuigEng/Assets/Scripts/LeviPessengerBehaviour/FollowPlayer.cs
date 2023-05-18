@@ -20,13 +20,13 @@ public class FollowPlayer : MonoBehaviour
 
 
     int timer = 0;
-    bool resetTimer= false;
+    bool resetTimer = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-    
+
     }
 
     // Update is called once per frame
@@ -37,11 +37,11 @@ public class FollowPlayer : MonoBehaviour
         cameradetector = GetComponent<InCameraDetector>();
 
 
-        if(ImAllowdToFollow == false)
+        if (ImAllowdToFollow == false)
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         }
-        
+
         if (ImAllowdToFollow == true)
         {
             if (ID.insight == false)

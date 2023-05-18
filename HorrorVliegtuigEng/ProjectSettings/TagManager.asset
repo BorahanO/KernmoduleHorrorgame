@@ -6,6 +6,8 @@ TagManager:
   tags:
   - StartQuest
   - ProgressQuest
+  - PessengerSeat
+  - Pessenger
   layers:
   - Default
   - TransparentFX
@@ -13,7 +15,7 @@ TagManager:
   - Pickup
   - Water
   - UI
-  - 
+  - Pessenger
   - 
   - 
   - 

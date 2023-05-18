@@ -7,7 +7,6 @@ public class DubbleCheckInsight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,15 +19,24 @@ public class DubbleCheckInsight : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
+        if (other.gameObject.layer == 6)
+        {
+            Debug.Log("hallo");
+        }
         if (other.gameObject.tag == "Pessenger")
         {
+            Debug.Log("hallo");
             other.gameObject.GetComponent<InCameraDetector>().insight2 = true;
         }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if (other.gameObject.layer == 6)
+        {
+            Debug.Log("hallo");
+        }
+
 
         if (other.gameObject.tag == "Pessenger")
         {
@@ -36,4 +44,5 @@ public class DubbleCheckInsight : MonoBehaviour
         }
 
     }
+
 }
