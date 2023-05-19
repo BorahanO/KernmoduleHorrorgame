@@ -26,7 +26,7 @@ public class JumpScareTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log(other);
             TM.jumpscareIsTriggered = true;

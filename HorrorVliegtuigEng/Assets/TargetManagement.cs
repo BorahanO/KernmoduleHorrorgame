@@ -27,13 +27,12 @@ public class TargetManagement : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(insight);
+       // Debug.Log(insight);
         foreach (var target in targets)
         {
-
             if (IsVisible(cam, target))
             {
-
+                Debug.Log(target);
                 insight = true;
             }
             else
