@@ -10,6 +10,7 @@ TagManager:
   - Pessenger
   - SpawnLocation
   - passenger
+  - SpawnPessenger
   layers:
   - Default
   - TransparentFX

@@ -6,24 +6,25 @@ using UnityEngine.UI;
 public class PessengerBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
-    int timer = 0;
     public int NewPassengerWillStandUpTime;
-    public bool PessengerIsComing = false;
 
-    public int HowManyPeopleCanWalk = 1;
+    public int HowMuchPee;
+    public bool AllowdToPee;
+    int PeeTimer;
+
+    public bool weepingangles;
+
+
+    // public int HowManyPeopleCanWalk = 1;
 
     public List<GameObject> Pessengers;
 
-    public int MaximumPessengerSpawn;
-    public bool PessengerSpawn = false;
+    //public int MaximumPessengerSpawn;
+    //public bool PessengerSpawn = false;
 
-    public Transform PlayerTarget;
     Vector3 SpawnDistance = new Vector3(0, 0.5f, -1);
 
     // public TriggerManager TM;
-
-    public bool Trigger;
-
     private void Awake()
     {
     }
@@ -37,40 +38,53 @@ public class PessengerBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pessengerIsComing();
+        StateMachine();
+       // pessengerIsComing();
     }
 
-
-    // deze functie wordt gebruikt om pessengers achter je te laten spawnen met een trigger 
-
-
-    /// oude functie waar een random pessenger wordt gekozen om achter je te spawenen;
-    public GameObject ChooseRandomObject()
+    public GameObject weepingAngles()
     {
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
-        chosenPessenger.GetComponent<FollowPlayer>().ImAllowdToFollow = true;
+        chosenPessenger.GetComponent<DestinationPessenger>().weepingAngles = true;
         return Pessengers[index];
     }
 
-    public void pessengerIsComing()
+    public GameObject INeedToPee()
     {
-        timer++;
-        if (timer >= NewPassengerWillStandUpTime)
+       Debug.Log(PeeTimer);
+       int index = Random.Range(0, Pessengers.Count);
+       GameObject chosenPessenger = Pessengers[index];
+       chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee = true;
+       return Pessengers[index];
+    }
+
+
+    public void StateMachine()
+    {
+        PeeTimer++;
+        if (PeeTimer > HowMuchPee * 10 || AllowdToPee == true)
         {
-            PessengerIsComing = true;
-            Debug.Log("is Coming!");
+         INeedToPee();
+         AllowdToPee = false;
         }
 
-        if (PessengerIsComing == true)
+
+
+        if (weepingangles == true)
         {
-            ChooseRandomObject();
-            timer = 0;
-            PessengerIsComing = false;
+            //timer++;
+            //if (timer >= NewPassengerWillStandUpTime)
+            //{
+            //    weepingAngles();
+            //    timer = 0;
+            //}
+            weepingAngles();
         }
     }
 
 
 
- 
+
+
 }

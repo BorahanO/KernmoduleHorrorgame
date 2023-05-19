@@ -2,13 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class TriggerSpawnPair
-{
-    public GameObject trigger;
-    public GameObject spawnLocation;
-}
-
 public class TriggerManager : MonoBehaviour
 {
     public TriggerSpawnPair[] triggerSpawnPairs;
@@ -19,6 +12,17 @@ public class TriggerManager : MonoBehaviour
     public bool jumpscareIsTriggered = false;
 
     public GameObject Playertarget;
+
+    public GameObject trigger;
+    public GameObject spawnLocation;
+
+
+    [System.Serializable]
+    public class TriggerSpawnPair
+    {
+        public GameObject trigger;
+        public GameObject spawnLocation;
+    }
 
     private void Start()
     {
@@ -32,7 +36,7 @@ public class TriggerManager : MonoBehaviour
             rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
             SetTriggerSpawnActive(activeTriggerIndex);
         }
-        
+
         if (activeTriggerIndex == 2)
         {
             rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
@@ -59,8 +63,12 @@ public class TriggerManager : MonoBehaviour
         Instantiate(prefabPessenger, spawnLocation.transform.TransformPoint(spawnDistance), rotation);
         jumpscareIsTriggered = false;
 
+        var PessengerSeat = GameObject.FindWithTag("SpawnPessenger");
+
+
+
         // als je de pessenger wil laten spawnen achter de speler gebruik dan de code hieronder.
-       if ( index == 3)
+        if (index == 3)
         {
 
         }
@@ -83,3 +91,5 @@ public class TriggerManager : MonoBehaviour
         }
     }
 }
+
+
