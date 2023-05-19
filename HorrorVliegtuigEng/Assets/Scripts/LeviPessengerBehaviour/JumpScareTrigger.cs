@@ -25,7 +25,7 @@ public class JumpScareTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log(other);
-        TM.jumpscareIsTriggerd = true;
-        TM.TriggerCount++;
+        TM.jumpscareIsTriggered = true;
+        TM.activeTriggerIndex++;
     }
 }

@@ -452,7 +452,7 @@ MonoBehaviour:
   SpawnLocatie3: {fileID: 1677554087}
   jumpscareIsTriggerd: 0
   PrefabPessenger: {fileID: 2356690978537564915, guid: 9497bbbc0b409a440bebe6e851c61135, type: 3}
-  PlayerTarget: {fileID: 0}
+  PlayerTarget: {fileID: 1829975776}
 --- !u!1 &60174884
 GameObject:
   m_ObjectHideFlags: 0

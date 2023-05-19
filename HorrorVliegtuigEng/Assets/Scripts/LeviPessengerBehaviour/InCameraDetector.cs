@@ -20,25 +20,13 @@ public class InCameraDetector : MonoBehaviour
     void Start()
     {
         dubbelcheckInsight = GetComponent<DubbleCheckInsight>();
-
-
-        PB = GetComponent<PessengerBehaviour>();
         renderer = GetComponent<MeshRenderer>();
-        collider = GetComponent<Collider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (insight == true)
-        {
-            renderer.sharedMaterial.color = Color.green;
-        }
-
-        if (insight == false)
-        {
-            renderer.sharedMaterial.color = Color.red;
-        }
+        collider = GetComponent<Collider>();
 
         if (insight2 == true)
         {
@@ -49,19 +37,21 @@ public class InCameraDetector : MonoBehaviour
         // dit werkt blijkbaar alleen met meshrenderer of kleur ofzo 
         // maar alleen een boolean heeft hij blijkbaar problemen. 
 
+        var Pessenger = this.gameObject.transform.position;
+
         var bounds = collider.bounds;
+
         cameraFrustum = GeometryUtility.CalculateFrustumPlanes(camera);
         if (GeometryUtility.TestPlanesAABB(cameraFrustum, bounds))
         {
-
             insight = true;
         }
         else
         {
-            if (insight2 == false)
-            {
-                insight = false;
-            }
+            insight = false;
         }
+
+        Debug.DrawLine(bounds.center, bounds.size);
     }
+
 }
