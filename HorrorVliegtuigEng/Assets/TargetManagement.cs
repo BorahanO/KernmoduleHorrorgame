@@ -5,6 +5,7 @@ using UnityEngine;
 public class TargetManagement : MonoBehaviour
 {
     public List<GameObject> targets;
+    public PessengerBehaviour PB;
     public Camera cam;
     public bool insight;
 
@@ -27,18 +28,21 @@ public class TargetManagement : MonoBehaviour
     private void Update()
     {
 
-       // Debug.Log(insight);
-        foreach (var target in targets)
+        if(PB.weepingangles == true)
         {
-            if (IsVisible(cam, target))
+            foreach (var target in targets)
             {
-                Debug.Log(target);
-                insight = true;
-            }
-            else
-            {
-                insight = false;
+                if (IsVisible(cam, target))
+                {
+                    target.GetComponent<DestinationPessenger>().weepingAngles = true;
+                }
+                else
+                {
+                    target.GetComponent<DestinationPessenger>().weepingAngles = false;
+                }
             }
         }
+       // Debug.Log(insight);
+ 
     }
 }

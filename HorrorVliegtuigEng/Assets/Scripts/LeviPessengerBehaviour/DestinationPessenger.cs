@@ -5,9 +5,6 @@ using UnityEngine.AI;
 
 public class DestinationPessenger : MonoBehaviour
 {
-
-    InCameraDetector cameradetector;
-
     public TargetManagement TM;
 
     public PessengerBehaviour PB;
@@ -37,35 +34,25 @@ public class DestinationPessenger : MonoBehaviour
     {
 
         DestinationAirplane();
+        WeepingAngles();
 
-        if (weepingAngles == true)
-        {
-            WeepingAngles();
-        }
-
-        if (Stop == true)
-        {
-            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-        }
     }
 
     void WeepingAngles()
     {
         var playerloc = PlayerTarget.position;
         var Pessengerloc = PassengerSeat.transform.position;
-        cameradetector = GetComponent<InCameraDetector>();
 
-
-        if (TM.insight == false)
+        if (weepingAngles == true)
         {
-            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             Passagier.SetDestination(playerloc);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
         }
 
-        if (TM.insight == true)
+        if (weepingAngles == false)
         {
-            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
         }
 
     }

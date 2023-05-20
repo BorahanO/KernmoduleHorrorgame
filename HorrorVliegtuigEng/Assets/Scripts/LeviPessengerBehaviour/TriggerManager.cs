@@ -31,6 +31,9 @@ public class TriggerManager : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(activeTriggerIndex);
+
         if (activeTriggerIndex == 1)
         {
             rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
@@ -44,6 +47,12 @@ public class TriggerManager : MonoBehaviour
         }
 
         if (activeTriggerIndex == 3)
+        {
+            rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
+            SetTriggerSpawnActive(activeTriggerIndex);
+        }
+
+        if (activeTriggerIndex == 4)
         {
             rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
             SetTriggerSpawnActive(activeTriggerIndex);
