@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0fdc98899758645aa131540fc8cbbf, type: 3}
+  m_Name: SafetyCheck
+  m_EditorClassIdentifier: 
+  Stage: 0
+  QuestId: 1
+  QuestName: Safety Check
+  QuestDescription: Check if all safety items are on their position.
+  ObjectiveList:
+  - Count fire extuingers.s
+  - Check first aid kits.
+  - Clear exits and entrances.
+  currentObjective: 0
+  Completed: 0
