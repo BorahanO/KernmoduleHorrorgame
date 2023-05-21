@@ -11,6 +11,8 @@ TagManager:
   - SpawnLocation
   - passenger
   - SpawnPessenger
+  - 1stClass
+  - Phone
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Pessenger
-  - 
+  - Convo
   - 
   - 
   - 

@@ -12,9 +12,11 @@ public class QuestManager : MonoBehaviour
     public string currentObjective;
     public TMP_Text objectiveText;
 
+    [SerializeField] private List<Quest> fase3Quests;
+
     private void Start()
     {
-        
+        ActivateQuest(fase3Quests[0]);
     }
 
     private void Update()
@@ -28,7 +30,7 @@ public class QuestManager : MonoBehaviour
             objectiveText.text = "no active quests";
         }
 
-        if(isQuestActive)
+        if (isQuestActive)
         {
             currentObjective = activeQuest.ObjectiveList[activeQuest.currentObjective];
         }
@@ -40,29 +42,38 @@ public class QuestManager : MonoBehaviour
 
     public void ActivateQuest(Quest q)
     {
-        if (isQuestActive || q.Stage != currentStage || q.Completed) 
+        if (isQuestActive || q.Stage != currentStage)
         { return; }
         else
         {
             activeQuest = q;
             isQuestActive = true;
-            Debug.Log("started quest");
+            activeQuest.isActive = true;
+            Debug.Log("started quest " + q.QuestName);
         }
     }
 
     public void advanceQuest(Quest q)
     {
-        if (q.currentObjective < q.ObjectiveList.Count -1)
+        if (q.currentObjective < q.ObjectiveList.Count - 1)
         {
             q.currentObjective++;
-            Debug.Log("progressed quest");
+            Debug.Log("progressed quest " + q.QuestName);
         }
         else
         {
             isQuestActive = false;
+            activeQuest.isActive = false;
             activeQuest = null;
-            q.Completed = true;
-            Debug.Log("completed quest");
+            if (fase3Quests[q.QuestId + 1] != null)
+            {
+                ActivateQuest(fase3Quests[q.QuestId + 1]);
+            }
+            else
+            { //loop
+                ActivateQuest(fase3Quests[0]);
+            }
+            Debug.Log("completed quest" + q.QuestName);
         }
     }
 }
