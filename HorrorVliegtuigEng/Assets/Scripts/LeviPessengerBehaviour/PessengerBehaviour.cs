@@ -10,6 +10,7 @@ public class PessengerBehaviour : MonoBehaviour
 
     public int HowMuchPee;
     public bool AllowdToPee;
+    public bool ToYourSeats;
     int PeeTimer;
 
     public bool weepingangles;
@@ -39,7 +40,7 @@ public class PessengerBehaviour : MonoBehaviour
     void Update()
     {
         StateMachine();
-       // pessengerIsComing();
+
     }
 
     public GameObject weepingAngles()
@@ -59,17 +60,38 @@ public class PessengerBehaviour : MonoBehaviour
        return Pessengers[index];
     }
 
+    public void GoToYourSeats()
+    {
+        foreach (GameObject P in Pessengers)
+        {
+
+            if (ToYourSeats == false)
+            {
+                P.GetComponent<DestinationPessenger>().ToYourSeats = false;
+            }
+            else
+            {
+                P.GetComponent<DestinationPessenger>().ToYourSeats = true;
+            }
+        }
+    }
+
 
     public void StateMachine()
     {
         PeeTimer++;
         if (PeeTimer > HowMuchPee * 10 || AllowdToPee == true)
         {
-         INeedToPee();
-         AllowdToPee = false;
+          INeedToPee();
+          AllowdToPee = false;
+      
         }
 
-
+        if (ToYourSeats == true)
+        {
+            GoToYourSeats();
+            ToYourSeats = false;
+        }
 
         if (weepingangles == true)
         {

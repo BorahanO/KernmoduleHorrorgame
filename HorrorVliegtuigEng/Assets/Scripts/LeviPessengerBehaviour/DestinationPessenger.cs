@@ -16,6 +16,9 @@ public class DestinationPessenger : MonoBehaviour
     public bool weepingAngles = false;
     public bool Stop;
     public bool NeedToPee = false;
+    public bool ToYourSeats;
+
+    public int peetimer;
 
 
 
@@ -33,15 +36,15 @@ public class DestinationPessenger : MonoBehaviour
     void Update()
     {
 
-        DestinationAirplane();
+        ToiletDestination();
         WeepingAngles();
+        ToyourSeats();
 
     }
 
     void WeepingAngles()
     {
         var playerloc = PlayerTarget.position;
-        var Pessengerloc = PassengerSeat.transform.position;
 
         if (weepingAngles == true)
         {
@@ -57,7 +60,7 @@ public class DestinationPessenger : MonoBehaviour
 
     }
 
-    void DestinationAirplane()
+    void ToiletDestination()
     {
 
         var toilet = Toilet.transform.position;
@@ -70,6 +73,23 @@ public class DestinationPessenger : MonoBehaviour
         {
             gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             Passagier.SetDestination(Toilet.position);
+            peetimer++;
+
+            if (peetimer > 2500)
+            {
+                var Pessengerloc = PassengerSeat.transform.position;
+                Passagier.SetDestination(Pessengerloc);
+            }
         }
+    }
+
+    void ToyourSeats()
+    {
+        if (ToYourSeats == true)
+        {
+            var Pessengerloc = PassengerSeat.transform.position;
+            Passagier.SetDestination(Pessengerloc);
+        }
+
     }
 }
