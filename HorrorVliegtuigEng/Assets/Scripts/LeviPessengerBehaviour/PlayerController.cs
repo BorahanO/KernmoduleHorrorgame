@@ -8,10 +8,14 @@ public class PlayerController : MonoBehaviour
     public QuestTriggers trigger;
     public Quest quest;
 
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,14 +25,14 @@ public class PlayerController : MonoBehaviour
             trigger = other.GetComponentInParent<QuestTriggers>();
             quest = trigger.quest;
             manager.ActivateQuest(quest);
-           // other.enabled = false;
+            other.enabled = false;
         }
-        else if(other.tag == "ProgressQuest")
+        else if (other.tag == "ProgressQuest")
         {
             trigger = other.GetComponentInParent<QuestTriggers>();
             quest = trigger.quest;
             manager.advanceQuest(quest);
-            //other.enabled = false;
+            other.enabled = false;
         }
     }
 }
