@@ -11,8 +11,9 @@ TagManager:
   - SpawnLocation
   - passenger
   - SpawnPessenger
-  - 1stClass
   - Phone
+  - Snack
+  - Drink
   layers:
   - Default
   - TransparentFX
