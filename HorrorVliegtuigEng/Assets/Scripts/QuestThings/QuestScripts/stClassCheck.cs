@@ -10,7 +10,7 @@ public class stClassCheck : MonoBehaviour
     public QuestManager manager;
     public PickupObject pickup;
 
-    public StartConvo person;
+    public StartConvo convo;
     public BoxCollider door;
 
     private void Start()
@@ -29,10 +29,16 @@ public class stClassCheck : MonoBehaviour
             {
                 case 0:
                     door.enabled = true;
-                    person.enabled = true;
+                    convo.allowedToShow = true;
+                    break;
+                case 1:
+                    if (convo.hasBeenShown)
+                    {
+                        manager.advanceQuest(quest);
+                    }
                     break;
                 case 2:
-                    person.enabled = false;
+                    convo.allowedToShow = false;
                     //if picked up phone, go to stage 3
                     if (pickup.CurrentObject != null)
                     {
@@ -43,13 +49,16 @@ public class stClassCheck : MonoBehaviour
                     }
                     break;
                 case 3:
-                    person.enabled = true;
                     if (pickup.CurrentObject == null)
                     {
                         manager.advanceQuest(quest);
                     }
                     break;
             }
+        }
+        else
+        {
+            door.enabled = false;
         }
     }
 }

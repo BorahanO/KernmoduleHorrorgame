@@ -38,4 +38,9 @@ public class MakeCartFollow : MonoBehaviour
             transform.position = player.position + offset;
         }
     }
+
+    public bool getPushCart()
+    {
+        return pushCart;
+    }
 }

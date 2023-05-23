@@ -17,13 +17,9 @@ MonoBehaviour:
   QuestName: Refill the snack and drinks carts for the  next round.
   QuestDescription: 
   ObjectiveList:
-  - Bring business class cart to the storage room.
-  - Refill snacks of the business class cart.
-  - Refill snacks of the business class cart.
-  - Refill drinks of the business class cart.
-  - Bring economy class cart to the storage room.
-  - Refill snacks of the economy class cart.
-  - Refill snacks of the business class cart.
-  - Refill drinks of the economy class cart.
-  currentObjective: 0
-  Completed: 0
+  - Bring cart to the storage room.
+  - Put the refill snacks on the cart.
+  - Put the refill drinks on the cart.
+  - Bring the cart back to it's station.
+  currentObjective: 3
+  isActive: 0
