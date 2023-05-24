@@ -57,18 +57,8 @@ public class PessengerBehaviour : MonoBehaviour
         return Pessengers[index];
     }
 
-    public GameObject weepingAnglesStop()
-    {
-        int index = Random.Range(0, Pessengers.Count);
-        GameObject chosenPessenger = Pessengers[index];
-        chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = false;
-        return Pessengers[index];
-    }
-
     public GameObject INeedToPee()
     {
-       Debug.Log(PeeTimer);
-       var toilet = Toilet.transform.position;
        int index = Random.Range(0, Pessengers.Count);
        GameObject chosenPessenger = Pessengers[index];
        chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee = true;
@@ -77,7 +67,7 @@ public class PessengerBehaviour : MonoBehaviour
 
     public void GoToYourSeats()
     {
-        foreach ( GameObject P in Pessengers)
+        foreach (GameObject P in Pessengers)
         {
             P.GetComponent<DestinationPessenger>().ToYourSeats = true;
         }
@@ -102,10 +92,10 @@ public class PessengerBehaviour : MonoBehaviour
 
         if (WeepingAnglesActive == true)
         {
-            if (timer >= NewPassengerWillStandUpTime)
+            if (PeeTimer >= NewPassengerWillStandUpTime)
             {
                 weepingAngles();
-                timer = 0;
+                PeeTimer = 0;
             }
         }
     }

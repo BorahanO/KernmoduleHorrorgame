@@ -35,7 +35,7 @@ public class DestinationPessenger : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    { 
         var Pessengerloc = PassengerSeat.transform.position;
         var playerloc = PlayerTarget.position;
 
@@ -47,12 +47,13 @@ public class DestinationPessenger : MonoBehaviour
 
     void WeepingAngles()
     {
-        var playerloc = PlayerTarget.position;
-
+        
         if (WeepingAnglesIsActive == true)
         {
+            Debug.Log("het werdt gezien");
             if (WalkToPlayer == true)
             {
+                var playerloc = PlayerTarget.position;
                 Passagier.SetDestination(playerloc);
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
