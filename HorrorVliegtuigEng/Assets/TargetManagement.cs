@@ -28,21 +28,20 @@ public class TargetManagement : MonoBehaviour
     private void Update()
     {
 
-        if(PB.weepingangles == true)
+        if (PB.WeepingAnglesActive == true)
         {
             foreach (var target in targets)
             {
                 if (IsVisible(cam, target))
                 {
-                    target.GetComponent<DestinationPessenger>().weepingAngles = true;
+                    target.GetComponent<DestinationPessenger>().WalkToPlayer = true;
+
                 }
                 else
                 {
-                    target.GetComponent<DestinationPessenger>().weepingAngles = false;
+                    target.GetComponent<DestinationPessenger>().WalkToPlayer = false;
                 }
             }
         }
-       // Debug.Log(insight);
- 
     }
 }

@@ -15,7 +15,7 @@ public class LookAtPlayer : MonoBehaviour
 
     void Update()
     {
-        if (lookAt == true) 
+        if (lookAt == true)
         {
             transform.LookAt(playerTransform);
         } 

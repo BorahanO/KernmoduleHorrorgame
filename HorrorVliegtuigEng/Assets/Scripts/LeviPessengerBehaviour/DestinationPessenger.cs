@@ -13,7 +13,8 @@ public class DestinationPessenger : MonoBehaviour
     public Transform PlayerTarget;
     public Transform Toilet;
 
-    public bool weepingAngles = false;
+    public bool WalkToPlayer = false;
+    public bool WeepingAnglesIsActive;
     public bool Stop;
     public bool NeedToPee = false;
     public bool ToYourSeats;
@@ -35,9 +36,11 @@ public class DestinationPessenger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var Pessengerloc = PassengerSeat.transform.position;
+        var playerloc = PlayerTarget.position;
 
-        ToiletDestination();
         WeepingAngles();
+        ToiletDestination();
         ToyourSeats();
 
     }
@@ -46,50 +49,42 @@ public class DestinationPessenger : MonoBehaviour
     {
         var playerloc = PlayerTarget.position;
 
-        if (weepingAngles == true)
+        if (WeepingAnglesIsActive == true)
         {
-            Passagier.SetDestination(playerloc);
-            gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+            if (WalkToPlayer == true)
+            {
+                Passagier.SetDestination(playerloc);
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
+            }
+
+            if (WalkToPlayer == false)
+            {
+                gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+
+            }
         }
-
-        if (weepingAngles == false)
-        {
-            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-        }
-
     }
 
     void ToiletDestination()
     {
-
         var toilet = Toilet.transform.position;
-        if (NeedToPee == false)
-        {
-            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-        }
-
         if (NeedToPee == true)
         {
-            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            if (peetimer > 2500)
-            {
-                var Pessengerloc = PassengerSeat.transform.position;
-                Passagier.SetDestination(Pessengerloc);
-            }
+            NeedToPee = false;
         }
     }
 
     void ToyourSeats()
     {
+        var Pessengerloc = PassengerSeat.transform.position;
         if (ToYourSeats == true)
         {
-            var Pessengerloc = PassengerSeat.transform.position;
             Passagier.SetDestination(Pessengerloc);
+            ToYourSeats = false;
         }
-
     }
 }
