@@ -21,5 +21,5 @@ MonoBehaviour:
   - Put the refill snacks on the cart.
   - Put the refill drinks on the cart.
   - Bring the cart back to it's station.
-  currentObjective: 3
+  currentObjective: 0
   isActive: 0

@@ -20,4 +20,4 @@ MonoBehaviour:
   - Check toilet 1.
   - Check toilet 2.
   currentObjective: 0
-  Completed: 0
+  isActive: 0

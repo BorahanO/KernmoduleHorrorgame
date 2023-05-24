@@ -21,5 +21,5 @@ MonoBehaviour:
   - Check on all first class passengers.
   - Find their phone
   - Return the phone to the owner.
-  currentObjective: 3
+  currentObjective: 0
   isActive: 0
