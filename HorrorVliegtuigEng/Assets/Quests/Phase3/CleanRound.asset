@@ -20,9 +20,10 @@ MonoBehaviour:
   - Get first class trash.
   - Get business class trash.
   - Get economy class trash.
-  - Throw away trash.
+  - Throw away trash in station.
   - Go to storageroom.
   - Get cleaning supplies.
-  - clean dirty spots.
-  currentObjective: 0
-  Completed: 0
+  - Clean dirty spots.
+  - Put cleaning supplies back.
+  currentObjective: 7
+  isActive: 0

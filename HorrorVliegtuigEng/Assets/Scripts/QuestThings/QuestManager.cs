@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuestManager : MonoBehaviour
 {
@@ -65,13 +66,13 @@ public class QuestManager : MonoBehaviour
             isQuestActive = false;
             activeQuest.isActive = false;
             activeQuest = null;
-            if (fase3Quests[q.QuestId + 1] != null)
+            if (q.QuestId + 1 != fase3Quests.Count)
             {
                 ActivateQuest(fase3Quests[q.QuestId + 1]);
             }
             else
             { //loop
-                ActivateQuest(fase3Quests[0]);
+                SceneManager.LoadScene("QuestScene");
             }
             Debug.Log("completed quest" + q.QuestName);
         }

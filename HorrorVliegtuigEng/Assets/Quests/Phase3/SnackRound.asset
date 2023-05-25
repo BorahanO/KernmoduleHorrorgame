@@ -22,4 +22,4 @@ MonoBehaviour:
   - Get cart in economy class.
   - Ask all economy class passengers for snack and drink.
   currentObjective: 3
-  isActive: 0
+  isActive: 1
