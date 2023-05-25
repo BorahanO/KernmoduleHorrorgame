@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Rest 2
   m_EditorClassIdentifier: 
   Stage: 2
-  QuestId: 6
+  QuestId: 5
   QuestName: Rest until dinner
   QuestDescription: 
   ObjectiveList:
   - Go to the resting place.
   - Rest until dinner.
-  currentObjective: 0
+  currentObjective: 1
   isActive: 0

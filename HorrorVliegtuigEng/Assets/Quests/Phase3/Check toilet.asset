@@ -19,5 +19,5 @@ MonoBehaviour:
   ObjectiveList:
   - Check toilet 1.
   - Check toilet 2.
-  currentObjective: 0
+  currentObjective: 1
   isActive: 0
