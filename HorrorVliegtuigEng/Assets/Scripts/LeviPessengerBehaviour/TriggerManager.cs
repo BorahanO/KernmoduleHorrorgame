@@ -7,7 +7,7 @@ public class TriggerManager : MonoBehaviour
     public TriggerSpawnPair[] triggerSpawnPairs;
     public GameObject prefabPessenger;
 
-    public int activeTriggerIndex = 0;
+    public int activeTriggerIndex;
     private Quaternion rotation;
     public bool jumpscareIsTriggered = false;
 
@@ -17,6 +17,7 @@ public class TriggerManager : MonoBehaviour
 
     public GameObject trigger;
     public GameObject spawnLocation;
+    public bool EenKeerUitvoeren;
 
 
     [System.Serializable]
@@ -25,7 +26,6 @@ public class TriggerManager : MonoBehaviour
         public GameObject trigger;
         public GameObject spawnLocation;
     }
-
     private void Start()
     {
         SetTriggerSpawnActive(activeTriggerIndex);
@@ -33,33 +33,45 @@ public class TriggerManager : MonoBehaviour
 
     private void Update()
     {
-        if (activeTriggerIndex == 1)
-        {
-            PB.ToYourSeats = true;
-        }
-
-        if (activeTriggerIndex == 2)
-        {
-            rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
-            SetTriggerSpawnActive(activeTriggerIndex);
-        }
-
-        if (activeTriggerIndex == 3)
-        {
-            rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
-            SetTriggerSpawnActive(activeTriggerIndex);
-        }
-
-        if (activeTriggerIndex == 4)
-        {
-            rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
-            SetTriggerSpawnActive(activeTriggerIndex);
-        }
+        Debug.Log(activeTriggerIndex);
 
 
-        if (jumpscareIsTriggered)
+        if (EenKeerUitvoeren == true)
         {
-            PessengerJumpscareTrigger(activeTriggerIndex);
+            if (activeTriggerIndex == 1)
+            {
+                PB.ToYourSeats = true;
+                EenKeerUitvoeren = false;
+                SetTriggerSpawnActive(activeTriggerIndex);
+            }
+
+            if (activeTriggerIndex == 2)
+            {
+                rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
+                EenKeerUitvoeren = false;
+                SetTriggerSpawnActive(activeTriggerIndex);
+            }
+
+            if (activeTriggerIndex == 3)
+            {
+                rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
+                EenKeerUitvoeren = false;
+                SetTriggerSpawnActive(activeTriggerIndex);
+            }
+
+            if (activeTriggerIndex == 4)
+            {
+                rotation = Quaternion.LookRotation(Vector3.left, Vector3.up);
+                EenKeerUitvoeren = false;
+                SetTriggerSpawnActive(activeTriggerIndex);
+            }
+
+            if (jumpscareIsTriggered)
+            {
+                PessengerJumpscareTrigger(activeTriggerIndex);
+                EenKeerUitvoeren = false;
+                jumpscareIsTriggered = false;
+            }
         }
     }
 
@@ -72,13 +84,7 @@ public class TriggerManager : MonoBehaviour
 
         var PessengerSeat = GameObject.FindWithTag("SpawnPessenger");
 
-
-
         // als je de pessenger wil laten spawnen achter de speler gebruik dan de code hieronder.
-        if (index == 3)
-        {
-
-        }
     }
 
     private void SetTriggerSpawnActive(int index)

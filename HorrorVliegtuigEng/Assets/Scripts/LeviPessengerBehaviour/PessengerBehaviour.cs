@@ -79,6 +79,7 @@ public class PessengerBehaviour : MonoBehaviour
         PeeTimer++;
         if (PeeTimer > HowMuchPee || AllowdToPee == true)
         {
+          Debug.Log("lekker plassen");
           INeedToPee();
           PeeTimer = 0;
           AllowdToPee = false;
