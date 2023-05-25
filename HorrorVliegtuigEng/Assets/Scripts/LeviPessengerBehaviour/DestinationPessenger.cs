@@ -47,7 +47,6 @@ public class DestinationPessenger : MonoBehaviour
 
     void WeepingAngles()
     {
-        
         if (WeepingAnglesIsActive == true)
         {
             Debug.Log("het werdt gezien");
@@ -69,13 +68,19 @@ public class DestinationPessenger : MonoBehaviour
 
     void ToiletDestination()
     {
+        var Pessengerloc = PassengerSeat.transform.position;
         var toilet = Toilet.transform.position;
         if (NeedToPee == true)
         {
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            NeedToPee = false;
+            
+            if (peetimer > 10000)
+            {
+             Passagier.SetDestination(Pessengerloc);
+             NeedToPee = false;
+            }
         }
     }
 

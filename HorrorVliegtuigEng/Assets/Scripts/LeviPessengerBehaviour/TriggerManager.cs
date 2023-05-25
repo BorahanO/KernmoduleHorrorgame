@@ -11,6 +11,8 @@ public class TriggerManager : MonoBehaviour
     private Quaternion rotation;
     public bool jumpscareIsTriggered = false;
 
+    public PessengerBehaviour PB;
+
     public GameObject Playertarget;
 
     public GameObject trigger;
@@ -31,13 +33,9 @@ public class TriggerManager : MonoBehaviour
 
     private void Update()
     {
-
-        Debug.Log(activeTriggerIndex);
-
         if (activeTriggerIndex == 1)
         {
-            rotation = Quaternion.LookRotation(Vector3.right, Vector3.up);
-            SetTriggerSpawnActive(activeTriggerIndex);
+            PB.ToYourSeats = true;
         }
 
         if (activeTriggerIndex == 2)

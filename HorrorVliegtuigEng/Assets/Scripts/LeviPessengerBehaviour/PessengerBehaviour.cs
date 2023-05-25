@@ -77,9 +77,10 @@ public class PessengerBehaviour : MonoBehaviour
     public void StateMachine()
     {
         PeeTimer++;
-        if (PeeTimer > HowMuchPee * 10 || AllowdToPee == true)
+        if (PeeTimer > HowMuchPee || AllowdToPee == true)
         {
           INeedToPee();
+          PeeTimer = 0;
           AllowdToPee = false;
         }
 
@@ -89,13 +90,13 @@ public class PessengerBehaviour : MonoBehaviour
             ToYourSeats = false;
         }
 
-
         if (WeepingAnglesActive == true)
         {
-            if (PeeTimer >= NewPassengerWillStandUpTime)
+            timer++;
+            if (timer >= NewPassengerWillStandUpTime)
             {
                 weepingAngles();
-                PeeTimer = 0;
+                timer = 0;
             }
         }
     }
