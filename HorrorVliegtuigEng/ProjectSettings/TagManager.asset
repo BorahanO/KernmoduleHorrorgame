@@ -11,9 +11,6 @@ TagManager:
   - SpawnLocation
   - passenger
   - SpawnPessenger
-  - Phone
-  - Snack
-  - Drink
   layers:
   - Default
   - TransparentFX
@@ -22,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Pessenger
-  - Convo
+  - PessengerBody
   - 
   - 
   - 

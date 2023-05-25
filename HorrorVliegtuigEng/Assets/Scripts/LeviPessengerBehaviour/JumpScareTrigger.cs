@@ -29,6 +29,7 @@ public class JumpScareTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             Debug.Log(other);
+            TM.EenKeerUitvoeren = true;
             TM.jumpscareIsTriggered = true;
             TM.activeTriggerIndex++;
         }

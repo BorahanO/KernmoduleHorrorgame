@@ -12,8 +12,15 @@ public class PessengerBehaviour : MonoBehaviour
     public bool AllowdToPee;
     public bool ToYourSeats;
     int PeeTimer;
+    public int timer;
 
-    public bool weepingangles;
+
+    public GameObject PassengerSeat;
+    public GameObject Toilet;
+
+    public int Switch;
+
+    public bool WeepingAnglesActive;
 
 
     // public int HowManyPeopleCanWalk = 1;
@@ -40,20 +47,18 @@ public class PessengerBehaviour : MonoBehaviour
     void Update()
     {
         StateMachine();
-
     }
 
     public GameObject weepingAngles()
     {
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
-        chosenPessenger.GetComponent<DestinationPessenger>().weepingAngles = true;
+        chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
         return Pessengers[index];
     }
 
     public GameObject INeedToPee()
     {
-       Debug.Log(PeeTimer);
        int index = Random.Range(0, Pessengers.Count);
        GameObject chosenPessenger = Pessengers[index];
        chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee = true;
@@ -64,27 +69,20 @@ public class PessengerBehaviour : MonoBehaviour
     {
         foreach (GameObject P in Pessengers)
         {
-
-            if (ToYourSeats == false)
-            {
-                P.GetComponent<DestinationPessenger>().ToYourSeats = false;
-            }
-            else
-            {
-                P.GetComponent<DestinationPessenger>().ToYourSeats = true;
-            }
+            P.GetComponent<DestinationPessenger>().ToYourSeats = true;
         }
-    }
 
+    }
 
     public void StateMachine()
     {
         PeeTimer++;
-        if (PeeTimer > HowMuchPee * 10 || AllowdToPee == true)
+        if (PeeTimer > HowMuchPee || AllowdToPee == true)
         {
+          Debug.Log("lekker plassen");
           INeedToPee();
+          PeeTimer = 0;
           AllowdToPee = false;
-      
         }
 
         if (ToYourSeats == true)
@@ -93,15 +91,14 @@ public class PessengerBehaviour : MonoBehaviour
             ToYourSeats = false;
         }
 
-        if (weepingangles == true)
+        if (WeepingAnglesActive == true)
         {
-            //timer++;
-            //if (timer >= NewPassengerWillStandUpTime)
-            //{
-            //    weepingAngles();
-            //    timer = 0;
-            //}
-            weepingAngles();
+            timer++;
+            if (timer >= NewPassengerWillStandUpTime)
+            {
+                weepingAngles();
+                timer = 0;
+            }
         }
     }
 
