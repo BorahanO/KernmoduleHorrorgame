@@ -11,6 +11,12 @@ TagManager:
   - SpawnLocation
   - passenger
   - SpawnPessenger
+  - Phone
+  - Snack
+  - Drink
+  - floorDirt
+  - trashCan
+  - mop
   layers:
   - Default
   - TransparentFX
@@ -19,8 +25,8 @@ TagManager:
   - Water
   - UI
   - Pessenger
-  - PessengerBody
-  - 
+  - Convo
+  - Trash
   - 
   - 
   - 

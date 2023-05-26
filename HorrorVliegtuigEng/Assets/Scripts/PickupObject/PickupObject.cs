@@ -9,7 +9,7 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private Transform PickupTarget;
     [Space] 
     [SerializeField] private float PickupRange;
-    private Rigidbody CurrentObject;
+    public Rigidbody CurrentObject;
 
     void Update()
     {
