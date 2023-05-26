@@ -7,6 +7,10 @@ public class PessengerBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     public int NewPassengerWillStandUpTime;
+    public int StandUpTimeVerkleining;
+    public int VerkleinTimer;
+
+    public bool GoToIdleState;
 
     public int HowMuchPee;
     public bool AllowdToPee;
@@ -45,6 +49,11 @@ public class PessengerBehaviour : MonoBehaviour
     void Update()
     {
         StateMachine();
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            GoToIdleState = true;
+        }
     }
 
     public GameObject weepingAngles()
@@ -76,6 +85,7 @@ public class PessengerBehaviour : MonoBehaviour
     public void StateMachine()
     {
         PeeTimer++;
+        VerkleinTimer++;
         if (PeeTimer > HowMuchPee || AllowdToPee == true)
         {
           Debug.Log("lekker plassen");
@@ -98,6 +108,13 @@ public class PessengerBehaviour : MonoBehaviour
                 weepingAngles();
                 timer = 0;
             }
+        }
+
+
+        if (VerkleinTimer > StandUpTimeVerkleining)
+        {
+            NewPassengerWillStandUpTime = NewPassengerWillStandUpTime - 1000;
+            VerkleinTimer = 0;
         }
     }
 
