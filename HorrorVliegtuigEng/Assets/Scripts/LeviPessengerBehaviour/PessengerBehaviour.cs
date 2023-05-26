@@ -14,8 +14,6 @@ public class PessengerBehaviour : MonoBehaviour
     int PeeTimer;
     public int timer;
 
-
-    public GameObject PassengerSeat;
     public GameObject Toilet;
 
     public int Switch;
@@ -54,6 +52,7 @@ public class PessengerBehaviour : MonoBehaviour
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
         chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
+        chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
         return Pessengers[index];
     }
 

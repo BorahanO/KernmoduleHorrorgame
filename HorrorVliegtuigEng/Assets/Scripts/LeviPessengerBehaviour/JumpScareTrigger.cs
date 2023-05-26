@@ -16,7 +16,6 @@ public class JumpScareTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(TM.activeTriggerIndex);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -33,6 +32,5 @@ public class JumpScareTrigger : MonoBehaviour
             TM.jumpscareIsTriggered = true;
             TM.activeTriggerIndex++;
         }
-
     }
 }

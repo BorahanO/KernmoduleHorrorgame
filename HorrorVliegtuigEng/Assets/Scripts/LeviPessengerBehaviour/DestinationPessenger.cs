@@ -35,7 +35,7 @@ public class DestinationPessenger : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         var Pessengerloc = PassengerSeat.transform.position;
         var playerloc = PlayerTarget.position;
 
@@ -75,7 +75,6 @@ public class DestinationPessenger : MonoBehaviour
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            
             if (peetimer > 10000)
             {
              Passagier.SetDestination(Pessengerloc);
