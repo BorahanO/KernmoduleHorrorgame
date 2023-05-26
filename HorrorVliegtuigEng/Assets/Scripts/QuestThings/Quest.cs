@@ -13,5 +13,6 @@ public class Quest : ScriptableObject
 
     public List<string> ObjectiveList;
     public int currentObjective;
-    public bool Completed = false;
+
+    public bool isActive;
 }
