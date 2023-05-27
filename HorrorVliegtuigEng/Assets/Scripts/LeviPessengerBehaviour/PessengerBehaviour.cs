@@ -7,10 +7,9 @@ public class PessengerBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     public int NewPassengerWillStandUpTime;
-    public int StandUpTimeVerkleining;
+    public int StandUpReductionTime;
+    public int ReductionAmount;
     public int VerkleinTimer;
-
-    public bool GoToIdleState;
 
     public int HowMuchPee;
     public bool AllowdToPee;
@@ -121,9 +120,9 @@ public class PessengerBehaviour : MonoBehaviour
         }
 
 
-        if (VerkleinTimer > StandUpTimeVerkleining)
+        if (VerkleinTimer > StandUpReductionTime)
         {
-            NewPassengerWillStandUpTime = NewPassengerWillStandUpTime - 1000;
+            NewPassengerWillStandUpTime = NewPassengerWillStandUpTime - ReductionAmount;
             VerkleinTimer = 0;
         }
     }
