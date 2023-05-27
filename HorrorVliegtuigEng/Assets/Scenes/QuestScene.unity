@@ -14835,8 +14835,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 10657
-  StandUpTimeVerkleining: 10052
+  NewPassengerWillStandUpTime: 10112
+  StandUpReductionTime: 4882
+  ReductionAmount: 384
   VerkleinTimer: 0
   HowMuchPee: 1581
   AllowdToPee: 0
@@ -46172,7 +46173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555449342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.42, y: 0.24, z: -0.883}
+  m_LocalPosition: {x: 5.97, y: 0.24, z: -3.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
