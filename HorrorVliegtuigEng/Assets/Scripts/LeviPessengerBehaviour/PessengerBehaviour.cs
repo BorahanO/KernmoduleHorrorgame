@@ -52,7 +52,7 @@ public class PessengerBehaviour : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            GoToIdleState = true;
+            weepingAnglesStop();
         }
     }
 
@@ -65,6 +65,16 @@ public class PessengerBehaviour : MonoBehaviour
         return Pessengers[index];
     }
 
+    public void weepingAnglesStop()
+    {
+        foreach (GameObject P in Pessengers)
+        {
+            WeepingAnglesActive = false;
+            P.GetComponent<DestinationPessenger>().WalkToPlayer = false;
+            P.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = false;
+        }
+
+    }
     public GameObject INeedToPee()
     {
        int index = Random.Range(0, Pessengers.Count);

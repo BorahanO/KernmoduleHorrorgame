@@ -64,6 +64,13 @@ public class DestinationPessenger : MonoBehaviour
 
             }
         }
+        if (WeepingAnglesIsActive == false)
+        {
+            var Pessengerloc = PassengerSeat.transform.position;
+            Passagier.SetDestination(Pessengerloc);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
+
     }
 
     void ToiletDestination()
