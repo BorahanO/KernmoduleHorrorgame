@@ -21,6 +21,8 @@ public class PessengerBehaviour : MonoBehaviour
 
     public int Switch;
 
+    public Camera cam;
+
     public bool WeepingAnglesActive;
 
 
@@ -48,11 +50,6 @@ public class PessengerBehaviour : MonoBehaviour
     void Update()
     {
         StateMachine();
-
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            weepingAnglesStop();
-        }
     }
 
     public GameObject weepingAngles()
@@ -71,15 +68,17 @@ public class PessengerBehaviour : MonoBehaviour
             WeepingAnglesActive = false;
             P.GetComponent<DestinationPessenger>().WalkToPlayer = false;
             P.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = false;
+            timer = 0;
+            WeepingAnglesActive = true;
         }
 
     }
     public GameObject INeedToPee()
     {
-       int index = Random.Range(0, Pessengers.Count);
-       GameObject chosenPessenger = Pessengers[index];
-       chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee = true;
-       return Pessengers[index];
+        int index = Random.Range(0, Pessengers.Count);
+        GameObject chosenPessenger = Pessengers[index];
+        chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee = true;
+        return Pessengers[index];
     }
 
     public void GoToYourSeats()

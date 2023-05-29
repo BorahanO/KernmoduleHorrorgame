@@ -4,19 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - StartQuest
   - ProgressQuest
   - PessengerSeat
   - Pessenger
   - SpawnLocation
   - passenger
-  - SpawnPessenger
   - Phone
   - Snack
   - Drink
   - floorDirt
   - trashCan
   - mop
+  - exclamation
+  - medkit
+  - SpawnPessenger
   layers:
   - Default
   - TransparentFX

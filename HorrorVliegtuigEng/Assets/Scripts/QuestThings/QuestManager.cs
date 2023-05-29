@@ -71,8 +71,8 @@ public class QuestManager : MonoBehaviour
                 ActivateQuest(fase3Quests[q.QuestId + 1]);
             }
             else
-            { //loop
-                SceneManager.LoadScene("QuestScene");
+            { //next day
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             Debug.Log("completed quest" + q.QuestName);
         }

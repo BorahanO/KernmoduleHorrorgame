@@ -20,6 +20,9 @@ public class SnackRound : MonoBehaviour
     [SerializeField] private List<StartConvo> BusinessClass;
     [SerializeField] private List<StartConvo> EconomyClass;
 
+    private GameObject convoObject;
+    private GameObject exclamation;
+
     // public StartConvo person;
     public BoxCollider door;
 
@@ -34,15 +37,17 @@ public class SnackRound : MonoBehaviour
 
         if (isActive)
         {
-            foreach (StartConvo convo in BusinessClass)
-            {
-                convo.allowedToShow = true;
-            }
-
             stage = quest.currentObjective;
             switch (stage)
             {
                 case 0:
+                    foreach (StartConvo convo in BusinessClass)
+                    {
+                        convo.allowedToShow = true;
+                        convoObject = convo.gameObject;
+                        exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                        exclamation.SetActive(true);
+                    }
                     if (cart.getPushCart())
                     {
                         manager.advanceQuest(quest);
@@ -57,6 +62,9 @@ public class SnackRound : MonoBehaviour
                         if (convo.hasBeenShown)
                         {
                             temp++;
+                            convoObject = convo.gameObject;
+                            exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                            exclamation.SetActive(false);
                         }
                         minPassengers.text = temp.ToString();
                     }
@@ -75,6 +83,9 @@ public class SnackRound : MonoBehaviour
                     foreach (StartConvo convo in EconomyClass)
                     {
                         convo.allowedToShow = true;
+                        convoObject = convo.gameObject;
+                        exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                        exclamation.SetActive(true);
                     }
                     break;
                 case 3:
@@ -86,6 +97,9 @@ public class SnackRound : MonoBehaviour
                         if (convo.hasBeenShown)
                         {
                             temp1++;
+                            convoObject = convo.gameObject;
+                            exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                            exclamation.SetActive(false);
                         }
                         minPassengers.text = temp1.ToString();
                     }
@@ -107,10 +121,16 @@ public class SnackRound : MonoBehaviour
             foreach (StartConvo convo in BusinessClass)
             {
                 convo.allowedToShow = false;
+                convoObject = convo.gameObject;
+                exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                exclamation.SetActive(false);
             }
             foreach (StartConvo convo in EconomyClass)
             {
                 convo.allowedToShow = false;
+                convoObject = convo.gameObject;
+                exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                exclamation.SetActive(false);
             }
         }
     }

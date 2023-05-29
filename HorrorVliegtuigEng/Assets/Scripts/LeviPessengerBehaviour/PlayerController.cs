@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,19 +14,27 @@ public class PlayerController : MonoBehaviour
     private GameObject convoObject;
     private StartConvo convo;
     public Camera cam;
+    public PessengerBehaviour behaviour;
 
     [Space]
     public QuestManager manager;
     public QuestTriggers trigger;
     public Quest quest;
+    [Space]
+
+    public int maxPuffs;
+    public int usedPuffs;
+    public TMP_Text maxPuffsTxt;
+    public TMP_Text minPuffs;
 
     private void Start()
     {
-
+        maxPuffsTxt.text = maxPuffs.ToString();
     }
 
     private void Update()
     {
+        minPuffs.text = usedPuffs.ToString();
         if (Input.GetKeyDown(KeyCode.E))
         {
             //var ray = new Ray(player.transform.position, player.transform.forward);
@@ -45,6 +54,14 @@ public class PlayerController : MonoBehaviour
             {
                 trashObject = hit.transform.parent.gameObject;
                 trashObject.SetActive(false);
+            }
+            else if (Physics.Raycast(ray, out hit, range))
+            {
+                if (hit.transform.tag == "medkit" && usedPuffs != maxPuffs)
+                {
+                    behaviour.weepingAnglesStop();
+                    usedPuffs++;
+                }
             }
         }
     }
