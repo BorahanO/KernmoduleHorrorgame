@@ -18,6 +18,6 @@ MonoBehaviour:
   QuestDescription: 
   ObjectiveList:
   - Go to the resting place.
-  - Rest until dinner.
-  currentObjective: 1
+  - Rest for the next day.
+  currentObjective: 0
   isActive: 0

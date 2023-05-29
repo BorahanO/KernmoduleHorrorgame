@@ -9,6 +9,7 @@ public class Rest2 : MonoBehaviour
     public Quest quest;
     public QuestManager manager;
     public GameObject instructionsText;
+    public BoxCollider door;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class Rest2 : MonoBehaviour
             switch (stage)
             {
                 case 0:
+                    door.enabled = true;
                     instructionsText.SetActive(false);
                     break;
                 case 1:
@@ -39,6 +41,7 @@ public class Rest2 : MonoBehaviour
         else
         {
             instructionsText.SetActive(false);
+            door.enabled = false;
         }
     }
 }

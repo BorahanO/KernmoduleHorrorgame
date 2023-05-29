@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/QuestScene.unity
-    guid: e472883eda8729640bbf67a5ccb6bfaf
+    path: Assets/Scenes/FiveNights/Night1.unity
+    guid: 7a78ba605e9372747817c87a4873483c
+  - enabled: 1
+    path: Assets/Scenes/FiveNights/Night2.unity
+    guid: 4d5f42657864ca94bbcf0cf67b334995
+  - enabled: 1
+    path: Assets/Scenes/FiveNights/Night3.unity
+    guid: 1203c328c1070264ca9a20cd53549fb0
+  - enabled: 1
+    path: Assets/Scenes/FiveNights/Night4.unity
+    guid: 48b63e877163ee240b11e1f61302ac95
+  - enabled: 1
+    path: Assets/Scenes/FiveNights/Night5.unity
+    guid: 2141eaba724506b44b61801a19b8da62
+  - enabled: 1
+    path: Assets/Scenes/FiveNights/EndingScene.unity
+    guid: 4ae3922626283bf4a86a0af9b21f74d1
   m_configObjects: {}

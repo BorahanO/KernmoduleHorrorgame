@@ -6,7 +6,7 @@ public class MakeCartFollow : MonoBehaviour
     [SerializeField] private Vector3 offset;
     [SerializeField] private bool pushCart;
     [SerializeField] private bool readyToPush;
-    
+
     private void Awake()
     {
         pushCart = false;
@@ -14,12 +14,18 @@ public class MakeCartFollow : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        readyToPush = true;
+        if (other.transform.tag == "Player")
+        {
+            readyToPush = true;
+        }
     }
-    
+
     private void OnTriggerExit(Collider other)
     {
-        readyToPush = false;
+        if (other.transform.tag == "Player")
+        {
+            readyToPush = false;
+        }
     }
 
     private void Update()
@@ -32,7 +38,7 @@ public class MakeCartFollow : MonoBehaviour
         {
             pushCart = false;
         }
-        
+
         if (pushCart)
         {
             transform.position = player.position + offset;

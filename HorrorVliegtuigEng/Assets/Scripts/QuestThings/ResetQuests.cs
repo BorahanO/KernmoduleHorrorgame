@@ -6,7 +6,7 @@ public class ResetQuests : MonoBehaviour
 {
     public List<Quest> quests;
 
-    private void Start()
+    private void Awake()
     {
         foreach (Quest q in quests)
         {

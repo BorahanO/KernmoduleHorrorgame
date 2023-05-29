@@ -33,9 +33,6 @@ public class TriggerManager : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(activeTriggerIndex);
-
-
         if (EenKeerUitvoeren == true)
         {
             if (activeTriggerIndex == 1)
