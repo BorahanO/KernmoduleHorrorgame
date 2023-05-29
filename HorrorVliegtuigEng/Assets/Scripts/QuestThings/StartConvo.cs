@@ -27,7 +27,7 @@ public class StartConvo : MonoBehaviour
         {
             text.SetActive(true);
             hasBeenShown = true;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
             text.SetActive(false);
         }
     }

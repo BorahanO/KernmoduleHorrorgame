@@ -112,7 +112,7 @@ public class CleanRound : MonoBehaviour
                     {
                         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
                         RaycastHit hit;
-                        if (Physics.Raycast(ray, out hit, 3f))
+                        if (Physics.Raycast(ray, out hit, 4f))
                         {
                             if (hit.transform.tag == "trashCan")
                             {
@@ -142,7 +142,7 @@ public class CleanRound : MonoBehaviour
                         {
                             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
                             RaycastHit hit;
-                            if (Physics.Raycast(ray, out hit, 3f))
+                            if (Physics.Raycast(ray, out hit, 4f))
                             {
                                 if (hit.transform.tag == "floorDirt")
                                 {
