@@ -7,6 +7,9 @@ public class PessengerBehaviour : MonoBehaviour
 {
     // Start is called before the first frame update
     public int NewPassengerWillStandUpTime;
+    public int StandUpReductionTime;
+    public int ReductionAmount;
+    public int VerkleinTimer;
 
     public int HowMuchPee;
     public bool AllowdToPee;
@@ -14,8 +17,6 @@ public class PessengerBehaviour : MonoBehaviour
     int PeeTimer;
     public int timer;
 
-
-    public GameObject PassengerSeat;
     public GameObject Toilet;
 
     public int Switch;
@@ -47,6 +48,11 @@ public class PessengerBehaviour : MonoBehaviour
     void Update()
     {
         StateMachine();
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            weepingAnglesStop();
+        }
     }
 
     public GameObject weepingAngles()
@@ -54,9 +60,20 @@ public class PessengerBehaviour : MonoBehaviour
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
         chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
+        chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
         return Pessengers[index];
     }
 
+    public void weepingAnglesStop()
+    {
+        foreach (GameObject P in Pessengers)
+        {
+            WeepingAnglesActive = false;
+            P.GetComponent<DestinationPessenger>().WalkToPlayer = false;
+            P.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = false;
+        }
+
+    }
     public GameObject INeedToPee()
     {
        int index = Random.Range(0, Pessengers.Count);
@@ -77,6 +94,7 @@ public class PessengerBehaviour : MonoBehaviour
     public void StateMachine()
     {
         PeeTimer++;
+        VerkleinTimer++;
         if (PeeTimer > HowMuchPee || AllowdToPee == true)
         {
           Debug.Log("lekker plassen");
@@ -99,6 +117,13 @@ public class PessengerBehaviour : MonoBehaviour
                 weepingAngles();
                 timer = 0;
             }
+        }
+
+
+        if (VerkleinTimer > StandUpReductionTime)
+        {
+            NewPassengerWillStandUpTime = NewPassengerWillStandUpTime - ReductionAmount;
+            VerkleinTimer = 0;
         }
     }
 

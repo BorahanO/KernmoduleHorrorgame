@@ -35,7 +35,7 @@ public class DestinationPessenger : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
+    {
         var Pessengerloc = PassengerSeat.transform.position;
         var playerloc = PlayerTarget.position;
 
@@ -64,6 +64,13 @@ public class DestinationPessenger : MonoBehaviour
 
             }
         }
+        if (WeepingAnglesIsActive == false)
+        {
+            var Pessengerloc = PassengerSeat.transform.position;
+            Passagier.SetDestination(Pessengerloc);
+            gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+        }
+
     }
 
     void ToiletDestination()
@@ -75,7 +82,6 @@ public class DestinationPessenger : MonoBehaviour
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            
             if (peetimer > 10000)
             {
              Passagier.SetDestination(Pessengerloc);

@@ -1613,15 +1613,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 163
-  HowMuchPee: 817
+  NewPassengerWillStandUpTime: 1000
+  StandUpReductionTime: 300
+  ReductionAmount: 150
+  VerkleinTimer: 0
+  HowMuchPee: 10130
   AllowdToPee: 0
   ToYourSeats: 0
   timer: 0
-  PassengerSeat: {fileID: 2106330869}
   Toilet: {fileID: 874239716}
   Switch: 0
-  WeepingAnglesActive: 0
+  WeepingAnglesActive: 1
   Pessengers:
   - {fileID: 2074193473}
   - {fileID: 489079495}
@@ -5384,6 +5386,7 @@ GameObject:
   - component: {fileID: 1211233415}
   - component: {fileID: 1211233416}
   - component: {fileID: 1211233417}
+  - component: {fileID: 1211233418}
   m_Layer: 0
   m_Name: Collision
   m_TagString: PessengerSeat
@@ -5454,6 +5457,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1211233418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1211233414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e92a3b56df6d3f4798708c77a410ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JijMagDood: 0
 --- !u!65 &1265959022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7334,6 +7350,7 @@ GameObject:
   - component: {fileID: 1569062430}
   - component: {fileID: 1569062432}
   - component: {fileID: 1569062431}
+  - component: {fileID: 1569062433}
   m_Layer: 0
   m_Name: Collision
   m_TagString: PessengerSeat
@@ -7404,6 +7421,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8783064, y: 1, z: 0.7691479}
   m_Center: {x: 0.003603949, y: 0, z: -0.115425944}
+--- !u!114 &1569062433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569062429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e92a3b56df6d3f4798708c77a410ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JijMagDood: 0
 --- !u!1 &1587458238
 GameObject:
   m_ObjectHideFlags: 0
@@ -9808,6 +9838,7 @@ GameObject:
   - component: {fileID: 1999230035}
   - component: {fileID: 1999230037}
   - component: {fileID: 1999230036}
+  - component: {fileID: 1999230038}
   m_Layer: 0
   m_Name: Collision
   m_TagString: PessengerSeat
@@ -9878,6 +9909,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8783064, y: 1, z: 0.7691479}
   m_Center: {x: 0.003603949, y: 0, z: -0.115425944}
+--- !u!114 &1999230038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999230034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e92a3b56df6d3f4798708c77a410ec4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JijMagDood: 0
 --- !u!1 &2007399946
 GameObject:
   m_ObjectHideFlags: 0
@@ -9967,7 +10011,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh219730
+  m_Name: pb_Mesh26344
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2

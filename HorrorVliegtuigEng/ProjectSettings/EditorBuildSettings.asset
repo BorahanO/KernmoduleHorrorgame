@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/QuestScene.unity
+    guid: e472883eda8729640bbf67a5ccb6bfaf
   m_configObjects: {}
