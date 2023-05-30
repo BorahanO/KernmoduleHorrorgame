@@ -19,18 +19,6 @@ public class EnemyNotAllowdToHunt : MonoBehaviour
     void Update()
     {
 
-        if (DezePessengerIsGekozen == true)
-        {
-            if (IkStaNaastPlayer == true)
-            {
-                GetComponent<DestinationPessenger>().YouNotAllowdToFollowYet = true;
-            }
-
-            if (IkStaNaastPlayer == false)
-            {
-                GetComponent<DestinationPessenger>().YouNotAllowdToFollowYet = false;
-            }
-        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -39,7 +27,6 @@ public class EnemyNotAllowdToHunt : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             IkStaNaastPlayer = true;
-            IkHebNaastThePlayerGestaan++;
         }
     }
 

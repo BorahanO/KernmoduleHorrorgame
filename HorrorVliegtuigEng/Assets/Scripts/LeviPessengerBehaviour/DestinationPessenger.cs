@@ -41,11 +41,6 @@ public class DestinationPessenger : MonoBehaviour
         var Pessengerloc = PassengerSeat.transform.position;
         var playerloc = PlayerTarget.position;
 
-        if (YouNotAllowdToFollowYet == true)
-        {
-            Debug.Log("jaaaaaa nog niet");
-        }
-
         WeepingAngles();
         ToiletDestination();
         ToyourSeats();
@@ -56,37 +51,19 @@ public class DestinationPessenger : MonoBehaviour
     {
         if (WeepingAnglesIsActive == true)
         {
-            GetComponent<EnemyNotAllowdToHunt>().DezePessengerIsGekozen = true;
-
-            if (GetComponent<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+            if (WalkToPlayer == true)
             {
-                WeepingAnglesMagDoorGaan = true;
+                var playerloc = PlayerTarget.position;
+                Passagier.SetDestination(playerloc);
+                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
 
             }
 
-            if (GetComponent<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
+            if (WalkToPlayer == false)
             {
-                WeepingAnglesMagDoorGaan = false;
+                gameObject.GetComponent<NavMeshAgent>().isStopped = false;
             }
 
-
-
-            if (WeepingAnglesMagDoorGaan == true)
-            {
-                if (WalkToPlayer == true)
-                {
-                    var playerloc = PlayerTarget.position;
-                    Passagier.SetDestination(playerloc);
-                    gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-
-                }
-
-                if (WalkToPlayer == false)
-                {
-                    gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-                }
-
-            }
         }
 
         if (WeepingAnglesIsActive == false)
