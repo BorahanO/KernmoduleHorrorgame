@@ -67,7 +67,6 @@ public class DestinationPessenger : MonoBehaviour
             if (GetComponent<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
             {
                 WeepingAnglesMagDoorGaan = false;
-                // hier wil ik nog een kleine timer toevoegen;
             }
 
 
@@ -85,7 +84,6 @@ public class DestinationPessenger : MonoBehaviour
                 if (WalkToPlayer == false)
                 {
                     gameObject.GetComponent<NavMeshAgent>().isStopped = false;
-
                 }
 
             }
