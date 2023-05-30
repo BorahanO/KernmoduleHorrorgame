@@ -18,6 +18,8 @@ TagManager:
   - exclamation
   - medkit
   - SpawnPessenger
+  - Camera
+  - PessengerCollisionBox
   layers:
   - Default
   - TransparentFX

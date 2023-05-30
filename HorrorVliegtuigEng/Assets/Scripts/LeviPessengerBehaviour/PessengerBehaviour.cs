@@ -17,6 +17,8 @@ public class PessengerBehaviour : MonoBehaviour
     int PeeTimer;
     public int timer;
 
+    public int ImNextToPlayerTimer;
+
     public GameObject Toilet;
 
     public int Switch;
@@ -56,8 +58,22 @@ public class PessengerBehaviour : MonoBehaviour
     {
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
-        chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
-        chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+
+
+        if(chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == false)
+        {
+            if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+            {
+                chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
+                chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+            }
+        }
+
+
+        if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
+        {
+           // Debug.Log("ik mag niks doen");
+        }
         return Pessengers[index];
     }
 

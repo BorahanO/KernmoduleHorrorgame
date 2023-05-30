@@ -16,10 +16,6 @@ public class JijGaatDood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (JijMagDood == true)
-        {
-            Debug.Log("Hij staat aan");
-        }
     }
 
     private void OnTriggerEnter(Collider other)
