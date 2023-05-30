@@ -19,6 +19,8 @@ public class DestinationPessenger : MonoBehaviour
     public bool NeedToPee = false;
     public bool ToYourSeats;
 
+    public bool WeepingAnglesMagDoorGaan;
+    public bool YouNotAllowdToFollowYet;
     public int peetimer;
 
 
@@ -39,6 +41,11 @@ public class DestinationPessenger : MonoBehaviour
         var Pessengerloc = PassengerSeat.transform.position;
         var playerloc = PlayerTarget.position;
 
+        if (YouNotAllowdToFollowYet == true)
+        {
+            Debug.Log("jaaaaaa nog niet");
+        }
+
         WeepingAngles();
         ToiletDestination();
         ToyourSeats();
@@ -49,21 +56,41 @@ public class DestinationPessenger : MonoBehaviour
     {
         if (WeepingAnglesIsActive == true)
         {
-            Debug.Log("het werdt gezien");
-            if (WalkToPlayer == true)
+            GetComponent<EnemyNotAllowdToHunt>().DezePessengerIsGekozen = true;
+
+            if (GetComponent<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
             {
-                var playerloc = PlayerTarget.position;
-                Passagier.SetDestination(playerloc);
-                gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+                WeepingAnglesMagDoorGaan = true;
 
             }
 
-            if (WalkToPlayer == false)
+            if (GetComponent<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
             {
-                gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+                WeepingAnglesMagDoorGaan = false;
+                // hier wil ik nog een kleine timer toevoegen;
+            }
+
+
+
+            if (WeepingAnglesMagDoorGaan == true)
+            {
+                if (WalkToPlayer == true)
+                {
+                    var playerloc = PlayerTarget.position;
+                    Passagier.SetDestination(playerloc);
+                    gameObject.GetComponent<NavMeshAgent>().isStopped = true;
+
+                }
+
+                if (WalkToPlayer == false)
+                {
+                    gameObject.GetComponent<NavMeshAgent>().isStopped = false;
+
+                }
 
             }
         }
+
         if (WeepingAnglesIsActive == false)
         {
             var Pessengerloc = PassengerSeat.transform.position;
@@ -99,4 +126,5 @@ public class DestinationPessenger : MonoBehaviour
             ToYourSeats = false;
         }
     }
+
 }

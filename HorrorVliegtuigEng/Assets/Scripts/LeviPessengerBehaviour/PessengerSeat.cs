@@ -18,11 +18,9 @@ public class PessengerSeat : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-       Debug.Log("collision");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("other");
     }
 }
