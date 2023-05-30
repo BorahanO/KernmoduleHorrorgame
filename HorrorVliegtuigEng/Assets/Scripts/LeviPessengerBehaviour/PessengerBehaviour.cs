@@ -58,16 +58,21 @@ public class PessengerBehaviour : MonoBehaviour
     {
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
-        if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+
+
+        if(chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == false)
         {
-            chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
-            chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+            if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+            {
+                chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
+                chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+            }
         }
 
 
         if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
         {
-            Debug.Log("ik mag niks doen");
+           // Debug.Log("ik mag niks doen");
         }
         return Pessengers[index];
     }
