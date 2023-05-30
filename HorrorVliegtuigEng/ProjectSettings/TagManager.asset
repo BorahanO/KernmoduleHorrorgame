@@ -18,6 +18,7 @@ TagManager:
   - exclamation
   - medkit
   - SpawnPessenger
+  - Camera
   layers:
   - Default
   - TransparentFX
