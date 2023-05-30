@@ -54,23 +54,7 @@ public class DestinationPessenger : MonoBehaviour
         ToiletDestination();
         ToyourSeats();
 
-
-        if (transform.hasChanged == true)
-        {
-            Walking.active = true;
-            Idle.active = false;
-            Sitting.active = false;
-        }
-
-        if (YouAreSitting == true)
-        {
-            Walking.active = false;
-            Idle.active = false;
-            Sitting.active = false;
-        }
-
-        if (this.gameObject.GetComponent<Rigidbody>().velocity.magnitude > 0.01f) Debug.Log("We're moving!");
-        if (this.gameObject.GetComponent<Rigidbody>().velocity.magnitude < 0.05f) Debug.Log("Nooooooooooo!");
+        Animaties();
 
         PositionCheckTimer++;
 
@@ -84,11 +68,10 @@ public class DestinationPessenger : MonoBehaviour
     {
         if (WeepingAnglesIsActive == true)
         {
+
+
             if (WalkToPlayer == true)
             {
-                Walking.active = false;
-                Idle.active = true;
-                Sitting.active = false;
 
                 var playerloc = PlayerTarget.position;
                 Passagier.SetDestination(playerloc);
@@ -146,12 +129,46 @@ public class DestinationPessenger : MonoBehaviour
 
     void InYourSeat()
     {
+     
+    }
+
+
+    void Animaties()
+    {
+
         if (ImSitting == true)
         {
             Walking.active = false;
             Idle.active = false;
             Sitting.active = true;
         }
-    }
 
+        if (ImSitting == false)
+        {
+            if (WeepingAnglesIsActive == false)
+            {
+                if (GetComponent<NavMeshAgent>().velocity.x > 1)
+                {
+                    Walking.active = true;
+                    Idle.active = false;
+                    Sitting.active = false;
+                }
+
+                if (GetComponent<NavMeshAgent>().velocity.x < 0.05f)
+                {
+                    Walking.active = false;
+                    Idle.active = true;
+                    Sitting.active = false;
+                }
+            }
+
+            if (WeepingAnglesIsActive == true)
+            {
+                Walking.active = false;
+                Idle.active = true;
+                Sitting.active = false;
+            }
+
+        }
+    }
 }

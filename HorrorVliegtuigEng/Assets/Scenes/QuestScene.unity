@@ -889,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &24933293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5623,6 +5624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &191865817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15287,7 +15289,7 @@ MonoBehaviour:
   Toilet: {fileID: 2108468699}
   Switch: 0
   cam: {fileID: 0}
-  WeepingAnglesActive: 1
+  WeepingAnglesActive: 0
   Pessengers:
   - {fileID: 1937597750}
   - {fileID: 0}
@@ -26573,6 +26575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &862039044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37863,6 +37866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &1294502190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40252,6 +40256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &1363354151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42558,6 +42563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &1440729048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46326,7 +46332,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555449342}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.27349553, z: -0, w: 0.9618733}
   m_LocalPosition: {x: 0.46, y: 0.24, z: 2.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -46335,7 +46341,7 @@ Transform:
   - {fileID: 1443253175}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 31.745, z: 0}
 --- !u!114 &1555449344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46528,6 +46534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &1555528892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47300,6 +47307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &1585196997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55516,6 +55524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 691006eae6815a041b54c2c9aea8a404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pessenger: {fileID: 0}
 --- !u!65 &1921746903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55985,13 +55994,18 @@ MonoBehaviour:
   PassengerSeat: {fileID: 191865814}
   PlayerTarget: {fileID: 1555449343}
   Toilet: {fileID: 2108468700}
+  Idle: {fileID: 0}
+  Walking: {fileID: 0}
+  Sitting: {fileID: 0}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
   Stop: 0
   NeedToPee: 0
   ToYourSeats: 0
+  ImSitting: 0
   WeepingAnglesMagDoorGaan: 0
   YouNotAllowdToFollowYet: 0
+  YouAreSitting: 0
   peetimer: 0
 --- !u!54 &1937597753
 Rigidbody:
@@ -62111,7 +62125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7055768223944584234, guid: 596c6c231e4fe244185b7368350114c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.334
+      value: -3.65
       objectReference: {fileID: 0}
     - target: {fileID: 7055768223944584234, guid: 596c6c231e4fe244185b7368350114c2, type: 3}
       propertyPath: m_LocalRotation.w
