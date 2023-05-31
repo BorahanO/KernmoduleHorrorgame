@@ -102,10 +102,12 @@ public class DestinationPessenger : MonoBehaviour
         var toilet = Toilet.transform.position;
         if (NeedToPee == true)
         {
-            Walking.active = true;
-            Idle.active = false;
-            Sitting.active = false;
-
+            if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
+            {
+                Walking.active = true;
+                Idle.active = false;
+                Sitting.active = false;
+            }
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
@@ -136,39 +138,43 @@ public class DestinationPessenger : MonoBehaviour
     void Animaties()
     {
 
-        if (ImSitting == true)
+    
+
+
+        if (GetComponent<NavMeshAgent>().velocity.x < 0.01)
         {
             Walking.active = false;
-            Idle.active = false;
-            Sitting.active = true;
+            Idle.active = true;
+            Sitting.active = false;
         }
 
-        if (ImSitting == false)
+        if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
         {
-            if (WeepingAnglesIsActive == false)
-            {
-                if (GetComponent<NavMeshAgent>().velocity.x > 1)
-                {
-                    Walking.active = true;
-                    Idle.active = false;
-                    Sitting.active = false;
-                }
+            Walking.active = true;
+            Idle.active = false;
+            Sitting.active = false;
+        }
 
-                if (GetComponent<NavMeshAgent>().velocity.x < 0.05f)
-                {
-                    Walking.active = false;
-                    Idle.active = true;
-                    Sitting.active = false;
-                }
-            }
-
-            if (WeepingAnglesIsActive == true)
+        if (NeedToPee == true)
+        {
+            if (GetComponent<NavMeshAgent>().velocity.x < 0.01)
             {
                 Walking.active = false;
                 Idle.active = true;
                 Sitting.active = false;
             }
 
+            if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
+            {
+                Walking.active = true;
+                Idle.active = false;
+                Sitting.active = false;
+            }
+
         }
+
+
+
     }
 }
+
