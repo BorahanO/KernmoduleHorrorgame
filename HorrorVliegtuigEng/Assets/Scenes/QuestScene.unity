@@ -638,7 +638,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &17883215
 GameObject:
   m_ObjectHideFlags: 0
@@ -14492,7 +14491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &487976186
 GameObject:
   m_ObjectHideFlags: 0
@@ -15504,6 +15502,7 @@ MonoBehaviour:
   Toilet: {fileID: 2108468699}
   Switch: 0
   cam: {fileID: 0}
+  PeeCount: 0
   WeepingAnglesActive: 0
   Pessengers:
   - {fileID: 1937597750}
@@ -16648,7 +16647,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &545289083
 GameObject:
   m_ObjectHideFlags: 0
@@ -24979,7 +24977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &788653200
 GameObject:
   m_ObjectHideFlags: 0
@@ -25869,7 +25866,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &820949766
 GameObject:
   m_ObjectHideFlags: 0
@@ -28411,7 +28407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &897610515
 GameObject:
   m_ObjectHideFlags: 0
@@ -38685,8 +38680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1284801245
@@ -39973,7 +39966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!1 &1321263717
 GameObject:
   m_ObjectHideFlags: 0
@@ -47556,8 +47548,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!1 &1555528889
@@ -53505,7 +53495,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!4 &1775301220 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2153553142232844427, guid: 81bcab239050d734584c3295b0906a5a, type: 3}
@@ -55233,7 +55222,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 0}
 --- !u!65 &1847954473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57297,6 +57285,7 @@ MonoBehaviour:
   WeepingAnglesIsActive: 0
   NeedToPee: 0
   ToYourSeats: 0
+  HowMuchPee: 0
   YouAreSitting: 0
   peetimer: 0
   SittingDirection: {fileID: 0}
@@ -58822,7 +58811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1998663918
 Transform:
   m_ObjectHideFlags: 0
