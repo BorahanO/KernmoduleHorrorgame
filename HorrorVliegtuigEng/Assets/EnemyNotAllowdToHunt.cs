@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class EnemyNotAllowdToHunt : MonoBehaviour
 {
-    public bool DezePessengerIsGekozen;
-    public bool IkBenGekozenMagIkLopen;
     public bool IkStaNaastPlayer = false;
 
     public int IkHebNaastThePlayerGestaan;

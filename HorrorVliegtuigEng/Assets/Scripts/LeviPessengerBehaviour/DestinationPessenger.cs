@@ -22,6 +22,7 @@ public class DestinationPessenger : MonoBehaviour
     public bool WeepingAnglesIsActive;
     public bool NeedToPee = false;
     public bool ToYourSeats;
+    public int HowMuchPee;
 
     public bool YouAreSitting = false;
     public int peetimer;
@@ -65,16 +66,13 @@ public class DestinationPessenger : MonoBehaviour
     {
         if (WeepingAnglesIsActive == true)
         {
-
-
+            Debug.Log("imactive");
             if (WalkToPlayer == true)
             {
-
                 var playerloc = PlayerTarget.position;
                 Passagier.SetDestination(playerloc);
 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-
             }
 
             if (WalkToPlayer == false)
@@ -102,9 +100,12 @@ public class DestinationPessenger : MonoBehaviour
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            if (peetimer > 3000)
+            if (peetimer > HowMuchPee)
             {
              Passagier.SetDestination(Pessengerloc);
+             HowMuchPee = 0;
+             PB.PeeCount = 2;
+             Debug.Log(PB.PeeCount);
              NeedToPee = false;
             }
         }
