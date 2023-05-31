@@ -2791,7 +2791,7 @@ GameObject:
   - component: {fileID: 49665904}
   - component: {fileID: 49665903}
   m_Layer: 6
-  m_Name: Pessenger(8)
+  m_Name: Pessenger AssignToSystem (8)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12041,8 +12041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &279529139
@@ -15805,8 +15803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &375818750
@@ -18776,8 +18772,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &432490519
@@ -20771,7 +20765,7 @@ GameObject:
   - component: {fileID: 480142786}
   - component: {fileID: 480142785}
   m_Layer: 6
-  m_Name: Pessenger(9)
+  m_Name: Pessenger AssignToSystem (9)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21639,8 +21633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &493252593
@@ -31766,8 +31758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &719770400
@@ -33513,7 +33503,7 @@ GameObject:
   - component: {fileID: 767823525}
   - component: {fileID: 767823524}
   m_Layer: 6
-  m_Name: Pessenger(6)
+  m_Name: Pessenger AssignToSystem (6)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36448,7 +36438,7 @@ GameObject:
   - component: {fileID: 824593827}
   - component: {fileID: 824593826}
   m_Layer: 6
-  m_Name: Pessenger(7)
+  m_Name: Pessenger AssignToSystem (7)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39381,15 +39371,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets:
   - {fileID: 1549375608}
-  - {fileID: 500208478}
-  - {fileID: 1956544886}
-  - {fileID: 1917152522}
-  - {fileID: 1370186405}
-  - {fileID: 209254296}
-  - {fileID: 2133214232}
-  - {fileID: 80306541}
-  - {fileID: 1224417163}
-  - {fileID: 175583977}
+  - {fileID: 1276475693}
+  - {fileID: 1741395275}
+  - {fileID: 1794582441}
+  - {fileID: 1774140531}
+  - {fileID: 1163773194}
+  - {fileID: 767823522}
+  - {fileID: 824593824}
+  - {fileID: 49665901}
+  - {fileID: 480142784}
   PB: {fileID: 1155493778}
   cam: {fileID: 419409540}
   insight: 0
@@ -48995,8 +48985,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1139618004
@@ -49593,11 +49581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 78
+  NewPassengerWillStandUpTime: 2000
   StandUpReductionTime: 0
   ReductionAmount: 0
   VerkleinTimer: 0
-  ImAllowdToPeeTime: 2051
+  ImAllowdToPeeTime: 22
   AllowdToPee: 0
   ToYourSeats: 0
   timer: 0
@@ -49846,7 +49834,7 @@ GameObject:
   - component: {fileID: 1163773197}
   - component: {fileID: 1163773196}
   m_Layer: 6
-  m_Name: Pessenger(5)
+  m_Name: Pessenger AssignToSystem (5)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53742,7 +53730,7 @@ GameObject:
   - component: {fileID: 1276475696}
   - component: {fileID: 1276475695}
   m_Layer: 6
-  m_Name: Pessenger(1)
+  m_Name: Pessenger AssignToSystem (1)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58382,8 +58370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1391286355
@@ -65469,7 +65455,7 @@ GameObject:
   - component: {fileID: 1549375611}
   - component: {fileID: 1549375610}
   m_Layer: 6
-  m_Name: Pessenger
+  m_Name: Pessenger AssignToSystem
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72852,7 +72838,7 @@ GameObject:
   - component: {fileID: 1741395278}
   - component: {fileID: 1741395277}
   m_Layer: 6
-  m_Name: Pessenger(2)
+  m_Name: Pessenger AssignToSystem (2)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73391,8 +73377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1751143359
@@ -74464,7 +74448,7 @@ GameObject:
   - component: {fileID: 1774140534}
   - component: {fileID: 1774140533}
   m_Layer: 6
-  m_Name: Pessenger(4)
+  m_Name: Pessenger AssignToSystem (4)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75581,7 +75565,7 @@ GameObject:
   - component: {fileID: 1794582444}
   - component: {fileID: 1794582443}
   m_Layer: 6
-  m_Name: Pessenger(3)
+  m_Name: Pessenger AssignToSystem (3)
   m_TagString: Pessenger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75982,8 +75966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1799347535
@@ -84261,8 +84243,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &2028038220
@@ -85116,8 +85096,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed080886de49b440a1bc014c5503396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DezePessengerIsGekozen: 0
-  IkBenGekozenMagIkLopen: 0
   IkStaNaastPlayer: 0
   IkHebNaastThePlayerGestaan: 0
 --- !u!135 &2047161201
