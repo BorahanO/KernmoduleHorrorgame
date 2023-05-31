@@ -25,7 +25,7 @@ public class JijGaatDood : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 Debug.Log("DOOOOD other");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                SceneManager.LoadScene("JumpScare");
             }
         }
 

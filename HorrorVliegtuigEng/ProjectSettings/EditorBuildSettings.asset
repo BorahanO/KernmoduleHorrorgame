@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FiveNights/EndingScene.unity
     guid: 4ae3922626283bf4a86a0af9b21f74d1
+  - enabled: 1
+    path: Assets/JumpScare.unity
+    guid: a0c26dc8b72583348a11038b6d3beddf
   m_configObjects: {}
