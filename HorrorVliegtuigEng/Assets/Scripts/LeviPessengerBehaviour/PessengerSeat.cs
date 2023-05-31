@@ -28,7 +28,7 @@ public class PessengerSeat : MonoBehaviour
         if (other.gameObject.tag == "PessengerCollisionBox")
         {
             Debug.Log("het werkt");
-          Pessenger.GetComponent<DestinationPessenger>().YouAreSitting = true;
+            Pessenger.GetComponent<DestinationPessenger>().YouAreSitting = true;
         }
 
     }

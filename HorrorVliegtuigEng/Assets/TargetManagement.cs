@@ -35,11 +35,13 @@ public class TargetManagement : MonoBehaviour
                 if (IsVisible(cam, target))
                 {
                     target.GetComponent<DestinationPessenger>().WalkToPlayer = true;
+                    target.GetComponentInChildren<JijGaatDood>().JijMagDood = false;
 
                 }
                 else
                 {
                     target.GetComponent<DestinationPessenger>().WalkToPlayer = false;
+                    target.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
                 }
             }
         }

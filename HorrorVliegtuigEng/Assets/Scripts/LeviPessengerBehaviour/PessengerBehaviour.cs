@@ -109,16 +109,13 @@ public class PessengerBehaviour : MonoBehaviour
         PeeTimer++;
         VerkleinTimer++;
 
-        if (WeepingAnglesActive == false)
-        {
+
             if (PeeTimer > ImAllowdToPeeTime || AllowdToPee == true)
             {
                 Debug.Log("lekker plassen");
                 INeedToPee();
                 PeeTimer = 0;
             }
-        }
-
 
         if (ToYourSeats == true)
         {

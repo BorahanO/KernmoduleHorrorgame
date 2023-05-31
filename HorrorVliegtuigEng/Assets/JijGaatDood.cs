@@ -28,6 +28,11 @@ public class JijGaatDood : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+
+        if (JijMagDood == false)
+        {
+
+        }
     }
 
 
