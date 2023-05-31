@@ -11,7 +11,7 @@ public class PessengerBehaviour : MonoBehaviour
     public int ReductionAmount;
     public int VerkleinTimer;
 
-    public int ImAllowdToPeeTime;
+    public int HowMuchPee;
     public bool AllowdToPee;
     public bool ToYourSeats;
     int PeeTimer;
@@ -24,10 +24,10 @@ public class PessengerBehaviour : MonoBehaviour
     public int Switch;
 
     public Camera cam;
+    public int PeeCount;
 
     public bool WeepingAnglesActive;
 
-    public int PeeCount;
 
     // public int HowManyPeopleCanWalk = 1;
 
@@ -61,11 +61,15 @@ public class PessengerBehaviour : MonoBehaviour
         GameObject chosenPessenger = Pessengers[index];
 
 
-        if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+        if(chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == false)
         {
-            chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
-            chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+            if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+            {
+                chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
+                chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+            }
         }
+
 
         if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
         {
@@ -90,7 +94,6 @@ public class PessengerBehaviour : MonoBehaviour
     {
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
-        Debug.Log(PeeCount);
         chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee = true;
         return Pessengers[index];
     }
@@ -108,14 +111,13 @@ public class PessengerBehaviour : MonoBehaviour
     {
         PeeTimer++;
         VerkleinTimer++;
-
-
-            if (PeeTimer > ImAllowdToPeeTime || AllowdToPee == true)
-            {
-                Debug.Log("lekker plassen");
-                INeedToPee();
-                PeeTimer = 0;
-            }
+        if (PeeTimer > HowMuchPee || AllowdToPee == true)
+        {
+          Debug.Log("lekker plassen");
+          INeedToPee();
+          PeeTimer = 0;
+          AllowdToPee = false;
+        }
 
         if (ToYourSeats == true)
         {
@@ -146,3 +148,4 @@ public class PessengerBehaviour : MonoBehaviour
 
 
 }
+ 

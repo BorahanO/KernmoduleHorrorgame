@@ -32,6 +32,7 @@ public class DestinationPessenger : MonoBehaviour
     int PositionCheckTimer;
     int timer = 0;
     bool resetTimer = false;
+    int PeeCount;
 
 
     // Start is called before the first frame update
