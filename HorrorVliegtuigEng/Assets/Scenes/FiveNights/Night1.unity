@@ -49656,11 +49656,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 13
+  NewPassengerWillStandUpTime: 20000
   StandUpReductionTime: 0
   ReductionAmount: 0
   VerkleinTimer: 0
-  HowMuchPee: 10103
+  HowMuchPee: 8000
   AllowdToPee: 0
   ToYourSeats: 0
   timer: 0
