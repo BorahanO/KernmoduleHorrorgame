@@ -20,15 +20,12 @@ public class DestinationPessenger : MonoBehaviour
 
     public bool WalkToPlayer = false;
     public bool WeepingAnglesIsActive;
-    public bool Stop;
     public bool NeedToPee = false;
     public bool ToYourSeats;
-    public bool ImSitting;
 
-    public bool WeepingAnglesMagDoorGaan;
-    public bool YouNotAllowdToFollowYet;
     public bool YouAreSitting = false;
     public int peetimer;
+    public Transform SittingDirection;
 
 
     int PositionCheckTimer;
@@ -102,16 +99,10 @@ public class DestinationPessenger : MonoBehaviour
         var toilet = Toilet.transform.position;
         if (NeedToPee == true)
         {
-            if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
-            {
-                Walking.active = true;
-                Idle.active = false;
-                Sitting.active = false;
-            }
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            if (peetimer > 10000)
+            if (peetimer > 3000)
             {
              Passagier.SetDestination(Pessengerloc);
              NeedToPee = false;
@@ -129,49 +120,61 @@ public class DestinationPessenger : MonoBehaviour
         }
     }
 
-    void InYourSeat()
-    {
-     
-    }
-
 
     void Animaties()
     {
+        Sitting.transform.LookAt(SittingDirection);
 
-    
 
-
-        if (GetComponent<NavMeshAgent>().velocity.x < 0.01)
+        if (WeepingAnglesIsActive == true)
         {
             Walking.active = false;
             Idle.active = true;
             Sitting.active = false;
         }
 
-        if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
+        if (WeepingAnglesIsActive == false)
         {
-            Walking.active = true;
-            Idle.active = false;
-            Sitting.active = false;
-        }
-
-        if (NeedToPee == true)
-        {
-            if (GetComponent<NavMeshAgent>().velocity.x < 0.01)
+            if (YouAreSitting == false)
             {
-                Walking.active = false;
-                Idle.active = true;
                 Sitting.active = false;
+
+                if (Passagier.velocity.sqrMagnitude == 0f)
+                {
+                    Walking.active = false;
+                    Idle.active = true;
+                    Sitting.active = false;
+                }
+                if (Passagier.velocity.sqrMagnitude > 0f)
+                {
+                    Walking.active = true;
+                    Idle.active = false;
+                    Sitting.active = false;
+                }
             }
 
-            if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
+            if (YouAreSitting == false)
             {
-                Walking.active = true;
-                Idle.active = false;
-                Sitting.active = false;
+                if (GetComponent<NavMeshAgent>().velocity.x > 0.0001)
+                {
+                    Walking.active = true;
+                    Idle.active = false;
+                    Sitting.active = false;
+                }
+            }
+
+            if (YouAreSitting == true)
+            {
+                if (Passagier.velocity.sqrMagnitude == 0f)
+                {
+                    Walking.active = false;
+                    Idle.active = false;
+                    Sitting.active = true;
+                }
             }
 
         }
+
 
 
 
