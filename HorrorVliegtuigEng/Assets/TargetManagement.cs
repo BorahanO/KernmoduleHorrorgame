@@ -9,6 +9,12 @@ public class TargetManagement : MonoBehaviour
     public Camera cam;
     public bool insight;
 
+
+
+    public void Awake()
+    {
+        targets.AddRange(GameObject.FindGameObjectsWithTag("PessengerAssignToSystem"));
+    }
     private bool IsVisible(Camera c, GameObject target)
     {
         var planes = GeometryUtility.CalculateFrustumPlanes(c);
@@ -35,13 +41,13 @@ public class TargetManagement : MonoBehaviour
                 if (IsVisible(cam, target))
                 {
                     target.GetComponent<DestinationPessenger>().WalkToPlayer = true;
-                    target.GetComponentInChildren<JijGaatDood>().JijMagDood = false;
+                    target.GetComponentInChildren<JijGaatDood>().JijZietMijNiet = false;
 
                 }
                 else
                 {
                     target.GetComponent<DestinationPessenger>().WalkToPlayer = false;
-                    target.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+                    target.GetComponentInChildren<JijGaatDood>().JijZietMijNiet = true;
                 }
             }
         }

@@ -21,6 +21,7 @@ TagManager:
   - Camera
   - PessengerCollisionBox
   - Interactable
+  - PessengerAssignToSystem
   layers:
   - Default
   - TransparentFX

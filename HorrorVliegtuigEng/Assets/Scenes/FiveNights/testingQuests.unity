@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 11a1a1d8eab4eec4c8cdbfb0d1569a40, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: cb64ca04a6becb24fbc0d16422da9b96, type: 2}
 --- !u!1 &463066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,7 +1207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: ce1a120bce640e0489567af30e4f13c6, type: 2}
 --- !u!1 &15853763
 GameObject:
   m_ObjectHideFlags: 0
@@ -2915,11 +2914,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 49665905}
   PassengerSeat: {fileID: 1294502187}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 293666995}
   Walking: {fileID: 1238507046}
@@ -12892,7 +12890,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &279529139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16990,7 +16987,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &375818750
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -20088,7 +20084,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &432490519
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22184,11 +22179,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 480142787}
   PassengerSeat: {fileID: 475500146}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1093820}
   Walking: {fileID: 1057923274}
@@ -22908,7 +22902,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: ce1a120bce640e0489567af30e4f13c6, type: 2}
 --- !u!1 &487976186
 GameObject:
   m_ObjectHideFlags: 0
@@ -23260,7 +23253,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &493252593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -26019,7 +26011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 9f877a191377118408f7c399c0c4ee51, type: 2}
 --- !u!1 &545289083
 GameObject:
   m_ObjectHideFlags: 0
@@ -34422,7 +34413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &719770400
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -36371,11 +36361,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 767823526}
   PassengerSeat: {fileID: 1363354148}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1427404265}
   Walking: {fileID: 922985328}
@@ -37969,7 +37958,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 4d163d5d7123c1c44aca1e6eae8f2fc3, type: 2}
 --- !u!1 &788653200
 GameObject:
   m_ObjectHideFlags: 0
@@ -39298,7 +39286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 4084f53b691adc342b1dbeb2b347ebf4, type: 2}
 --- !u!1 &820949766
 GameObject:
   m_ObjectHideFlags: 0
@@ -39491,11 +39478,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 824593828}
   PassengerSeat: {fileID: 862039041}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1968859105}
   Walking: {fileID: 1442087629}
@@ -42676,7 +42662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 4084f53b691adc342b1dbeb2b347ebf4, type: 2}
 --- !u!1 &894590217
 GameObject:
   m_ObjectHideFlags: 0
@@ -53039,7 +53024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1139618004
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -53634,11 +53618,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 2000
-  StandUpReductionTime: 0
-  ReductionAmount: 0
+  NewPassengerWillStandUpTime: 1
+  StandUpReductionTime: 5000
+  ReductionAmount: 50
   VerkleinTimer: 0
-  HowMuchPee: 0
+  HowMuchPee: 3425
   AllowdToPee: 0
   ToYourSeats: 0
   timer: 0
@@ -53926,11 +53910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1163773198}
   PassengerSeat: {fileID: 1555528889}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 732638435}
   Walking: {fileID: 187013684}
@@ -58737,11 +58720,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1276475697}
   PassengerSeat: {fileID: 191865814}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1346240596}
   Walking: {fileID: 2042008231}
@@ -60738,7 +60720,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 1738839bbf6b93b4cac905efac98c0ac, type: 2}
 --- !u!1 &1320901613
 GameObject:
   m_ObjectHideFlags: 0
@@ -63439,7 +63420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1391286355
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -71090,11 +71070,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1549375612}
   PassengerSeat: {fileID: 1610518150}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1417583099}
   Walking: {fileID: 1633885879}
@@ -79149,11 +79128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1741395279}
   PassengerSeat: {fileID: 24933290}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1614089080}
   Walking: {fileID: 20095393}
@@ -79747,7 +79725,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1751143359
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -80691,7 +80668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: 9f877a191377118408f7c399c0c4ee51, type: 2}
 --- !u!1 &1772613537
 GameObject:
   m_ObjectHideFlags: 0
@@ -80857,11 +80833,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1774140535}
   PassengerSeat: {fileID: 1440729045}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 1144828127}
   Walking: {fileID: 235102261}
@@ -82071,11 +82046,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1794582445}
   PassengerSeat: {fileID: 1585196994}
-  PlayerTarget: {fileID: 1555449343}
+  PlayerTarget: {fileID: 1555449342}
   Toilet: {fileID: 264250934}
   Idle: {fileID: 414809917}
   Walking: {fileID: 393195319}
@@ -82531,7 +82505,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1799347535
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -84127,7 +84100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quest: {fileID: 11400000, guid: f32031b9a7be93649a93c5456ad57062, type: 2}
 --- !u!65 &1847954473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87334,7 +87306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 0}
   Passagier: {fileID: 1937619979}
   PassengerSeat: {fileID: 0}
@@ -91882,7 +91853,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &2028038220
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -92735,7 +92705,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &2047161201
 SphereCollider:
   m_ObjectHideFlags: 0

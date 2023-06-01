@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class DestinationPessenger : MonoBehaviour
 {
-    public TargetManagement TM;
 
     public PessengerBehaviour PB;
     public NavMeshAgent Passagier;
     public GameObject PassengerSeat;
-    public Transform PlayerTarget;
+    public GameObject PlayerTarget;
     public Transform Toilet;
+
 
 
     public GameObject Idle;
@@ -28,13 +28,6 @@ public class DestinationPessenger : MonoBehaviour
     public int peetimer;
     public Transform SittingDirection;
 
-
-    int PositionCheckTimer;
-    int timer = 0;
-    bool resetTimer = false;
-    int PeeCount;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -45,17 +38,11 @@ public class DestinationPessenger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var Pessengerloc = PassengerSeat.transform.position;
-        var playerloc = PlayerTarget.position;
-        var toilet = Toilet.transform.position;
-
         WeepingAngles();
         ToiletDestination();
         ToyourSeats();
 
         Animaties();
-
-        PositionCheckTimer++;
 
     }
 
@@ -70,7 +57,7 @@ public class DestinationPessenger : MonoBehaviour
             Debug.Log("imactive");
             if (WalkToPlayer == true)
             {
-                var playerloc = PlayerTarget.position;
+                var playerloc = PlayerTarget.transform.position;
                 Passagier.SetDestination(playerloc);
 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
@@ -105,7 +92,7 @@ public class DestinationPessenger : MonoBehaviour
             {
              Passagier.SetDestination(Pessengerloc);
              HowMuchPee = 0;
-             PB.PeeCount = 2;
+             //PB.PeeCount = 2;
              Debug.Log(PB.PeeCount);
              NeedToPee = false;
             }
@@ -167,6 +154,7 @@ public class DestinationPessenger : MonoBehaviour
 
             if (YouAreSitting == true)
             {
+
                 if (Passagier.velocity.sqrMagnitude == 0f)
                 {
                     Walking.active = false;

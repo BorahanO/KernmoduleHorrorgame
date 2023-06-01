@@ -6,6 +6,7 @@ public class PessengerSeat : MonoBehaviour
 {
 
     public GameObject Pessenger;
+    public Passenger_Manager PM;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,8 @@ public class PessengerSeat : MonoBehaviour
     {
         if (other.gameObject.tag == "PessengerCollisionBox")
         {
-            Debug.Log("het werkt");
             Pessenger.GetComponent<DestinationPessenger>().YouAreSitting = true;
+            Debug.Log("jij zit nu");
         }
 
     }
