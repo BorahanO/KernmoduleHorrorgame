@@ -13,6 +13,8 @@ public class NarrationBox : MonoBehaviour
     public bool isTyping;
     public static NarrationBox narrationBoxSingleton;
     public AudioSource TypeNoise;
+
+
     private void Awake()
     {
         narrationBoxSingleton = this;
@@ -60,7 +62,6 @@ public class NarrationBox : MonoBehaviour
                 if (isTyping == true)
                 {
                     Debug.Log("hi");
-                    TypeNoise.Play(0);
                     currentText = _textToSay.Substring(0, i + 1);
                     textMesh.text = currentText;
                     yield return new WaitForSeconds(delay);

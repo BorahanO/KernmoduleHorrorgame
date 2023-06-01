@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputDialogue : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class InputDialogue : MonoBehaviour
     public List<string> dialogueList = new List<string>();
     private int textIndex = 0;
     [SerializeField] private GameObject PressToContinueButton;
+    public string NextScene;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -19,6 +21,7 @@ public class InputDialogue : MonoBehaviour
                 NarrationBox.narrationBoxSingleton.TextBox.SetActive(true);
                 PressToContinueButton.SetActive(true);
                 isActivated = true;
+
             }
         }
     }
@@ -38,6 +41,7 @@ public class InputDialogue : MonoBehaviour
                 {
                     NarrationBox.narrationBoxSingleton.TextBox.SetActive(false);
                     PressToContinueButton.SetActive(false);
+                    SceneManager.LoadScene(NextScene);
                 }
             }
         }
