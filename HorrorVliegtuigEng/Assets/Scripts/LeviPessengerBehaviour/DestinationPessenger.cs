@@ -20,8 +20,11 @@ public class DestinationPessenger : MonoBehaviour
 
     public bool WalkToPlayer = false;
     public bool WeepingAnglesIsActive;
+    public bool WeepingAnglesButIneedToPee;
+    public bool DoneWithPee;
     public bool NeedToPee = false;
     public bool ToYourSeats;
+    public int GoingBackToWheepingafterWheepingTimer;
     public int HowMuchPee;
 
     public bool YouAreSitting = false;
@@ -43,7 +46,7 @@ public class DestinationPessenger : MonoBehaviour
         ToyourSeats();
 
         Animaties();
-
+        WheepingAnglesButIneedToPee();
     }
 
     private void FixedUpdate()
@@ -92,7 +95,7 @@ public class DestinationPessenger : MonoBehaviour
             {
              Passagier.SetDestination(Pessengerloc);
              HowMuchPee = 0;
-             //PB.PeeCount = 2;
+             DoneWithPee = true;
              Debug.Log(PB.PeeCount);
              NeedToPee = false;
             }
@@ -109,7 +112,21 @@ public class DestinationPessenger : MonoBehaviour
         }
     }
 
+    void WheepingAnglesButIneedToPee()
+    {
+        if (WeepingAnglesButIneedToPee == true)
+        {
+            if (DoneWithPee == true)
+            {
+                GoingBackToWheepingafterWheepingTimer++;
+                if(GoingBackToWheepingafterWheepingTimer > 3000)
+                {
+                    WeepingAnglesIsActive = true;
+                }
+            }
 
+        }
+    }
     void Animaties()
     {
         Sitting.transform.LookAt(SittingDirection);

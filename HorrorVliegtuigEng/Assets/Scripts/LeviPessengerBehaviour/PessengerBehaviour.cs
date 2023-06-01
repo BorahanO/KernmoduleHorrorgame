@@ -63,11 +63,19 @@ public class PessengerBehaviour : MonoBehaviour
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
 
-        if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+        if (chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == false)
         {
-            chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
-            chosenPessenger.GetComponentInChildren<JijGaatDood>().dubbleCheck = true;
-            Debug.Log("Ik kom achter je aan!!!");
+            if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
+            {
+                chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
+                chosenPessenger.GetComponentInChildren<JijGaatDood>().dubbleCheck = true;
+                Debug.Log("Ik kom achter je aan!!!");
+            }
+        }
+
+        if(chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == true)
+        {
+            chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesButIneedToPee = true;
         }
 
         if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
