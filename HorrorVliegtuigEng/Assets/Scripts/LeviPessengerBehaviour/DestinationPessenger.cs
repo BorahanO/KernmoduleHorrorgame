@@ -10,7 +10,8 @@ public class DestinationPessenger : MonoBehaviour
     public NavMeshAgent Passagier;
     public GameObject PassengerSeat;
     public GameObject PlayerTarget;
-    public Transform Toilet;
+    public Transform Toilet1;
+    public Transform Toilet2;
 
 
 
@@ -85,10 +86,20 @@ public class DestinationPessenger : MonoBehaviour
     void ToiletDestination()
     {
         var Pessengerloc = PassengerSeat.transform.position;
-        var toilet = Toilet.transform.position;
+       // var toilet = Toilet1.transform.position;
         if (NeedToPee == true)
         {
-            Passagier.SetDestination(Toilet.position);
+            int randomNumber = Random.Range(1, 2);
+            if (randomNumber == 1)
+            {
+                Passagier.SetDestination(Toilet1.transform.position);
+            }
+
+            if(randomNumber == 2)
+            {
+                Passagier.SetDestination(Toilet2.transform.position);
+            }
+           
             peetimer++;
 
             if (peetimer > HowMuchPee)
@@ -96,7 +107,6 @@ public class DestinationPessenger : MonoBehaviour
              Passagier.SetDestination(Pessengerloc);
              HowMuchPee = 0;
              DoneWithPee = true;
-             Debug.Log(PB.PeeCount);
              NeedToPee = false;
             }
         }

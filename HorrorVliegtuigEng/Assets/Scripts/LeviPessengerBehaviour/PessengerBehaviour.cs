@@ -58,8 +58,6 @@ public class PessengerBehaviour : MonoBehaviour
 
     public GameObject weepingAngles()
     {
-
-        Debug.Log("het wrodt gezien");
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
 
@@ -69,7 +67,6 @@ public class PessengerBehaviour : MonoBehaviour
             {
                 chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
                 chosenPessenger.GetComponentInChildren<JijGaatDood>().dubbleCheck = true;
-                Debug.Log("Ik kom achter je aan!!!");
             }
         }
 
