@@ -5398,8 +5398,8 @@ MonoBehaviour:
   Passagier: {fileID: 746755932}
   PassengerSeat: {fileID: 297290637}
   PlayerTarget: {fileID: 1829975775}
-  Toilet1: {fileID: 329076780}
-  Toilet2: {fileID: 565955176}
+  Toilet1: {fileID: 565955176}
+  Toilet2: {fileID: 329076780}
   Idle: {fileID: 26383476}
   Walking: {fileID: 1331771321}
   Sitting: {fileID: 1449411464}
@@ -7462,7 +7462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 1756
+  NewPassengerWillStandUpTime: 10091
   StandUpReductionTime: 0
   ReductionAmount: 0
   VerkleinTimer: 0

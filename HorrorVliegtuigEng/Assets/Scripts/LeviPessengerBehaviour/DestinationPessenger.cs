@@ -13,6 +13,7 @@ public class DestinationPessenger : MonoBehaviour
     public Transform Toilet1;
     public Transform Toilet2;
 
+    public AudioSource WalkingSound;
 
 
     public GameObject Idle;
@@ -36,6 +37,7 @@ public class DestinationPessenger : MonoBehaviour
     void Start()
     {
         Vector3 lastpos = gameObject.transform.position;
+        WalkingSound = GetComponent<AudioSource>();
 
     }
 
@@ -141,6 +143,16 @@ public class DestinationPessenger : MonoBehaviour
     {
         Sitting.transform.LookAt(SittingDirection);
 
+
+        if(Walking.active == true)
+        {
+            WalkingSound.Play();
+        }
+
+        if(Walking.active == false)
+        {
+            WalkingSound.Stop();
+        }
 
         if (WeepingAnglesIsActive == true)
         {
