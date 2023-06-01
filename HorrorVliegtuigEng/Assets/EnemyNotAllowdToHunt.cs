@@ -6,7 +6,6 @@ public class EnemyNotAllowdToHunt : MonoBehaviour
 {
     public bool IkStaNaastPlayer = false;
 
-    public int IkHebNaastThePlayerGestaan;
     // Start is called before the first frame update
     void Start()
     {

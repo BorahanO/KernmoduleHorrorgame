@@ -4169,7 +4169,7 @@ MonoBehaviour:
   StandUpReductionTime: 0
   ReductionAmount: 0
   VerkleinTimer: 0
-  ImAllowdToPeeTime: 26707
+  HowMuchPee: 0
   AllowdToPee: 0
   ToYourSeats: 0
   timer: 0
@@ -4177,8 +4177,8 @@ MonoBehaviour:
   Toilet: {fileID: 874239716}
   Switch: 0
   cam: {fileID: 946262778}
-  WeepingAnglesActive: 1
   PeeCount: 0
+  WeepingAnglesActive: 1
   Pessengers:
   - {fileID: 746581389}
   - {fileID: 2062720256}
@@ -4743,7 +4743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3658890855306362643, guid: 9b115d8af17b2b74e9bff9b9d51120a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.2808094
+      value: 13.81
       objectReference: {fileID: 0}
     - target: {fileID: 3658890855306362643, guid: 9b115d8af17b2b74e9bff9b9d51120a6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30292,7 +30292,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3658890855306362643, guid: 9b115d8af17b2b74e9bff9b9d51120a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.37
+      value: 5.48
       objectReference: {fileID: 0}
     - target: {fileID: 3658890855306362643, guid: 9b115d8af17b2b74e9bff9b9d51120a6, type: 3}
       propertyPath: m_LocalPosition.y
