@@ -1207,6 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &15853763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &17144535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1827,6 +1830,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &22712371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2047,6 +2052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1741395275}
+  PM: {fileID: 0}
 --- !u!65 &24933293
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2924,8 +2930,11 @@ MonoBehaviour:
   Sitting: {fileID: 1639154300}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -5626,6 +5635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &112663288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6241,6 +6252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &126029099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8593,6 +8606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &181163970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8992,6 +9007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1276475693}
+  PM: {fileID: 0}
 --- !u!65 &191865817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11118,6 +11134,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &231370241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18009,6 +18027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397620676}
   - component: {fileID: 397620675}
+  - component: {fileID: 397620677}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -18127,6 +18146,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &397620677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397620674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06b51d27acf7fa46873b3c4609cb4be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: {fileID: 11400000, guid: 027df15d0d5c7d547af2116c4a7e0b42, type: 2}
 --- !u!1 &399321382
 GameObject:
   m_ObjectHideFlags: 0
@@ -20433,6 +20465,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &434075972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21169,6 +21203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &458981830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21569,6 +21605,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &471035843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21882,6 +21920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 480142784}
+  PM: {fileID: 0}
 --- !u!65 &475500148
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22189,8 +22228,11 @@ MonoBehaviour:
   Sitting: {fileID: 1761292723}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -22902,6 +22944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &487976186
 GameObject:
   m_ObjectHideFlags: 0
@@ -25333,6 +25376,7 @@ MonoBehaviour:
   isQuestActive: 0
   currentObjective: 
   objectiveText: {fileID: 1083426148}
+  completeDay: {fileID: 11400000, guid: 212dc2a3ea2e1a841b7f077ee272b8ef, type: 2}
   fase3Quests:
   - {fileID: 11400000, guid: 1738839bbf6b93b4cac905efac98c0ac, type: 2}
   - {fileID: 11400000, guid: f32031b9a7be93649a93c5456ad57062, type: 2}
@@ -26011,6 +26055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &545289083
 GameObject:
   m_ObjectHideFlags: 0
@@ -26598,6 +26643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &558887711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28787,6 +28834,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &603776959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29371,6 +29420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &616930521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30751,6 +30802,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &650992729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31271,6 +31324,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &656892811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33684,6 +33739,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &701997818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34774,6 +34831,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &728479300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35917,6 +35976,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &752993266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36371,8 +36432,11 @@ MonoBehaviour:
   Sitting: {fileID: 268028622}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -37691,6 +37755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &778799310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37958,6 +38024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &788653200
 GameObject:
   m_ObjectHideFlags: 0
@@ -39286,6 +39353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &820949766
 GameObject:
   m_ObjectHideFlags: 0
@@ -39488,8 +39556,11 @@ MonoBehaviour:
   Sitting: {fileID: 743662982}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -40146,6 +40217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &837736975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40295,6 +40368,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &839333950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41212,6 +41287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 824593824}
+  PM: {fileID: 0}
 --- !u!65 &862039044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42662,6 +42738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &894590217
 GameObject:
   m_ObjectHideFlags: 0
@@ -42819,6 +42896,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &896368055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -45643,6 +45722,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &960324945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -47333,6 +47414,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1009392022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48431,6 +48514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1030806728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50298,6 +50383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1079739764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -51947,6 +52034,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1112973705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53920,8 +54009,11 @@ MonoBehaviour:
   Sitting: {fileID: 1057298798}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -58730,8 +58822,11 @@ MonoBehaviour:
   Sitting: {fileID: 1860720748}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -59484,6 +59579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 49665901}
+  PM: {fileID: 0}
 --- !u!65 &1294502190
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59950,6 +60046,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1302713277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60720,6 +60818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &1320901613
 GameObject:
   m_ObjectHideFlags: 0
@@ -60823,6 +60922,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1321263720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61450,6 +61551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1339357617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -61906,6 +62009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1348971182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -62514,6 +62619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 767823522}
+  PM: {fileID: 0}
 --- !u!65 &1363354151
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63303,6 +63409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1391071084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63972,6 +64080,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1400442133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -65723,6 +65833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1774140531}
+  PM: {fileID: 0}
 --- !u!65 &1440729048
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -66424,6 +66535,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1458414139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68356,6 +68469,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1498028468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68884,6 +68999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1511612124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71080,8 +71197,11 @@ MonoBehaviour:
   Sitting: {fileID: 2130544949}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -71773,6 +71893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1163773194}
+  PM: {fileID: 0}
 --- !u!65 &1555528892
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72556,6 +72677,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1578573879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72769,6 +72892,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1794582441}
+  PM: {fileID: 0}
 --- !u!65 &1585196997
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -73471,6 +73595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1549375608}
+  PM: {fileID: 0}
 --- !u!65 &1610518153
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74058,6 +74183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1627961928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74571,6 +74698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1637609543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -76437,6 +76566,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1676780635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79138,8 +79269,11 @@ MonoBehaviour:
   Sitting: {fileID: 1007735901}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -79874,6 +80008,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1753479008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80668,6 +80804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!1 &1772613537
 GameObject:
   m_ObjectHideFlags: 0
@@ -80843,8 +80980,11 @@ MonoBehaviour:
   Sitting: {fileID: 498812336}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -82056,8 +82196,11 @@ MonoBehaviour:
   Sitting: {fileID: 1285244016}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -84100,6 +84243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71ae46d32e467c548a515f99356e42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quest: {fileID: 0}
 --- !u!65 &1847954473
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86746,6 +86890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
+  PM: {fileID: 0}
 --- !u!65 &1921746903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86815,6 +86960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1925567568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -87316,8 +87463,11 @@ MonoBehaviour:
   Sitting: {fileID: 0}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -89975,6 +90125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1997828449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -90647,6 +90799,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &2005496836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -93446,6 +93600,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &2059501330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95751,6 +95907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &2111658844
 BoxCollider:
   m_ObjectHideFlags: 0
