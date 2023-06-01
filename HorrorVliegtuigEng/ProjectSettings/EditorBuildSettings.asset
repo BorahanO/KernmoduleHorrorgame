@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/FiveNights/Night1.unity
-    guid: 7a78ba605e9372747817c87a4873483c
+    path: Assets/Scenes/FiveNights/Menu.unity
+    guid: 73f60b01ddbba754bb2d97de40ff9585
+  - enabled: 1
+    path: Assets/Scenes/FiveNights/testingQuests.unity
+    guid: a42fdebf4129d754e921374d6fec1b47
   - enabled: 1
     path: Assets/Scenes/FiveNights/Night2.unity
     guid: 4d5f42657864ca94bbcf0cf67b334995

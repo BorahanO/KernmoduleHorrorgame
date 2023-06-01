@@ -13,6 +13,8 @@ public class QuestManager : MonoBehaviour
     public string currentObjective;
     public TMP_Text objectiveText;
 
+    public CompleteDayScriptable completeDay;
+
     [SerializeField] private List<Quest> fase3Quests;
 
     private void Start()
@@ -72,6 +74,7 @@ public class QuestManager : MonoBehaviour
             }
             else
             { //next day
+                completeDay.isUnlocked = true;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             Debug.Log("completed quest" + q.QuestName);
