@@ -6,7 +6,6 @@ public class PessengerSeat : MonoBehaviour
 {
 
     public GameObject Pessenger;
-    public Passenger_Manager PM;
     // Start is called before the first frame update
     void Start()
     {
