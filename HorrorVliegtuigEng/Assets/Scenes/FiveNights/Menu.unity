@@ -17952,7 +17952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
-  PM: {fileID: 0}
 --- !u!65 &674294370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18291,7 +18290,9 @@ MonoBehaviour:
   Passagier: {fileID: 682657890}
   PassengerSeat: {fileID: 1476028747}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 1409268624}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
@@ -20128,7 +20129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
-  PM: {fileID: 0}
 --- !u!65 &744315773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29798,7 +29798,9 @@ MonoBehaviour:
   Passagier: {fileID: 1117367749}
   PassengerSeat: {fileID: 674294367}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 1409268624}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
@@ -33929,22 +33931,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 956483042}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 2017744617}
+        m_TargetAssemblyTypeName: CheckUnlockedDays, Assembly-CSharp
+        m_MethodName: checkIfLocked
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017744615}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -37518,7 +37508,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
-  PM: {fileID: 0}
 --- !u!65 &1476028750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54070,7 +54059,9 @@ MonoBehaviour:
   Passagier: {fileID: 2134185735}
   PassengerSeat: {fileID: 744315770}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 1409268624}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
