@@ -79,6 +79,17 @@ public class CheckUnlockedDays : MonoBehaviour
                     locked.Play();
                 }
                 break;
+            case "PlayButton":
+                if (day1.isUnlocked)
+                {
+                    menuManager.LoadScene(1);
+                    unlocked.Play();
+                }
+                else
+                {
+                    locked.Play();
+                }
+                break;
         }
     }
 }

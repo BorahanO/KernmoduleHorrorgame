@@ -7450,7 +7450,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &303266613
 GameObject:
@@ -17952,7 +17952,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
-  PM: {fileID: 0}
 --- !u!65 &674294370
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18291,7 +18290,9 @@ MonoBehaviour:
   Passagier: {fileID: 682657890}
   PassengerSeat: {fileID: 1476028747}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 1409268624}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
@@ -20128,7 +20129,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
-  PM: {fileID: 0}
 --- !u!65 &744315773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25327,7 +25327,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &958439564
 PrefabInstance:
@@ -29798,7 +29798,9 @@ MonoBehaviour:
   Passagier: {fileID: 1117367749}
   PassengerSeat: {fileID: 674294367}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 1409268624}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
@@ -33720,6 +33722,79 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299291130}
   m_CullTransparentMesh: 1
+--- !u!1001 &1308402642
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.744
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.726
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.274
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.46390373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.46390373
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.5336603
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5336603
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570503431646426038, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -98
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059936071394879756, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
+      propertyPath: m_Name
+      value: Television
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de609f2d540faf14ab39e47b0765a679, type: 3}
 --- !u!1 &1313793645
 GameObject:
   m_ObjectHideFlags: 0
@@ -33929,22 +34004,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 956483042}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 2017744617}
+        m_TargetAssemblyTypeName: CheckUnlockedDays, Assembly-CSharp
+        m_MethodName: checkIfLocked
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2017744615}
-        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: LoadScene
-        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -35994,7 +36057,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1419645692
 GameObject:
@@ -37518,7 +37581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 0}
-  PM: {fileID: 0}
 --- !u!65 &1476028750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40244,7 +40306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1579127579
 GameObject:
@@ -43144,7 +43206,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1678211808
 GameObject:
@@ -50924,7 +50986,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2017744617
 MonoBehaviour:
@@ -54070,7 +54132,9 @@ MonoBehaviour:
   Passagier: {fileID: 2134185735}
   PassengerSeat: {fileID: 744315770}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 1409268624}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
