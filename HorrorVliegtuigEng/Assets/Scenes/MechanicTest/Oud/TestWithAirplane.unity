@@ -2636,7 +2636,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 746755929}
-  PM: {fileID: 623047725}
 --- !u!65 &297290639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2856,7 +2855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329076778}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97.87, y: 33.302223, z: 56.11}
+  m_LocalPosition: {x: 90.3, y: 32.41, z: 60.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4299,6 +4298,59 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558859350}
   m_Mesh: {fileID: -8920068693440997837, guid: 26585527b9eef934f85b9c198bb986c4, type: 3}
+--- !u!1 &565955175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 565955176}
+  - component: {fileID: 565955177}
+  m_Layer: 0
+  m_Name: Toilet (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &565955176
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565955175}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 90.3, y: 32.41, z: 56.41}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1058025967}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &565955177
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565955175}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &592144167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5346,7 +5398,8 @@ MonoBehaviour:
   Passagier: {fileID: 746755932}
   PassengerSeat: {fileID: 297290637}
   PlayerTarget: {fileID: 1829975775}
-  Toilet: {fileID: 329076780}
+  Toilet1: {fileID: 565955176}
+  Toilet2: {fileID: 329076780}
   Idle: {fileID: 26383476}
   Walking: {fileID: 1331771321}
   Sitting: {fileID: 1449411464}
@@ -7392,6 +7445,7 @@ Transform:
   - {fileID: 1682171580}
   - {fileID: 165418450}
   - {fileID: 329076780}
+  - {fileID: 565955176}
   - {fileID: 854830716}
   m_Father: {fileID: 1723889001}
   m_RootOrder: -1
@@ -7408,11 +7462,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00150f0201ed66e40986ea3283ff4df0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewPassengerWillStandUpTime: 600
+  NewPassengerWillStandUpTime: 10091
   StandUpReductionTime: 0
   ReductionAmount: 0
   VerkleinTimer: 0
-  HowMuchPee: 187
+  HowMuchPee: 537
   AllowdToPee: 0
   ToYourSeats: 0
   timer: 0
@@ -7917,7 +7971,8 @@ MonoBehaviour:
   Passagier: {fileID: 1148419002}
   PassengerSeat: {fileID: 1834761669}
   PlayerTarget: {fileID: 1829975775}
-  Toilet: {fileID: 329076780}
+  Toilet1: {fileID: 329076780}
+  Toilet2: {fileID: 565955176}
   Idle: {fileID: 1794540017}
   Walking: {fileID: 656080424}
   Sitting: {fileID: 866160795}
@@ -12669,7 +12724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pessenger: {fileID: 1148418999}
-  PM: {fileID: 623047725}
 --- !u!65 &1834761672
 BoxCollider:
   m_ObjectHideFlags: 0
