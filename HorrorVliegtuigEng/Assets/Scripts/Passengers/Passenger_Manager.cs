@@ -6,6 +6,7 @@ public class Passenger_Manager : MonoBehaviour
 {
     public GameObject[] npcs;
     public bool followHead;
+    public bool SecondCheck;
     void Start()
     {
         npcs = GameObject.FindGameObjectsWithTag("passenger");
@@ -13,6 +14,7 @@ public class Passenger_Manager : MonoBehaviour
     
     void Update()
     {
+
         if (followHead)
         {
             for (int i = 0; i < npcs.Length; i++)

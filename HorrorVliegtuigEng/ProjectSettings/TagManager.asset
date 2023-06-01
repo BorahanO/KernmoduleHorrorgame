@@ -20,6 +20,8 @@ TagManager:
   - SpawnPessenger
   - Camera
   - PessengerCollisionBox
+  - Interactable
+  - PessengerAssignToSystem
   layers:
   - Default
   - TransparentFX

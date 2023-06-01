@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 public class JijGaatDood : MonoBehaviour
 {
 
-    public bool JijMagDood;
+    public bool JijMagDood = false;
+    public bool JijZietMijNiet;
+
+    public bool dubbleCheck;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,17 +19,29 @@ public class JijGaatDood : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dubbleCheck == true)
+        {
+            if(JijZietMijNiet == true)
+            {
+                if (JijMagDood == true && JijZietMijNiet == true)
+                {
+                    Debug.Log("DOOOOD");
+                    SceneManager.LoadScene("JumpScare");
+                }
+            }
+  
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (JijMagDood == true)
-        {
             if (other.gameObject.tag == "Player")
             {
-                Debug.Log("DOOOOD other");
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log(other);
+            JijMagDood = true;
             }
-        }
+
     }
+
+
 }

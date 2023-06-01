@@ -6,6 +6,7 @@ public class MakeCartFollow : MonoBehaviour
     [SerializeField] private Vector3 offset;
     [SerializeField] private bool pushCart;
     [SerializeField] private bool readyToPush;
+    public AudioSource roll;
 
     private void Awake()
     {
@@ -33,10 +34,12 @@ public class MakeCartFollow : MonoBehaviour
         if (readyToPush && Input.GetKeyDown(KeyCode.E))
         {
             pushCart = true;
+            roll.Play();
         }
         if (pushCart && Input.GetKeyDown(KeyCode.F))
         {
             pushCart = false;
+            roll.Stop();
         }
 
         if (pushCart)

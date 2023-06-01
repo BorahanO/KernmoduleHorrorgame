@@ -24,6 +24,7 @@ public class PessengerBehaviour : MonoBehaviour
     public int Switch;
 
     public Camera cam;
+    public int PeeCount;
 
     public bool WeepingAnglesActive;
 
@@ -40,6 +41,7 @@ public class PessengerBehaviour : MonoBehaviour
     // public TriggerManager TM;
     private void Awake()
     {
+        Pessengers.AddRange(GameObject.FindGameObjectsWithTag("PessengerAssignToSystem"));
     }
 
 
@@ -56,19 +58,25 @@ public class PessengerBehaviour : MonoBehaviour
 
     public GameObject weepingAngles()
     {
+
+        Debug.Log("het wrodt gezien");
         int index = Random.Range(0, Pessengers.Count);
         GameObject chosenPessenger = Pessengers[index];
 
-
-        if(chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == false)
+        if (chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == false)
         {
             if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == false)
             {
                 chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesIsActive = true;
-                chosenPessenger.GetComponentInChildren<JijGaatDood>().JijMagDood = true;
+                chosenPessenger.GetComponentInChildren<JijGaatDood>().dubbleCheck = true;
+                Debug.Log("Ik kom achter je aan!!!");
             }
         }
 
+        if(chosenPessenger.GetComponent<DestinationPessenger>().NeedToPee == true)
+        {
+            chosenPessenger.GetComponent<DestinationPessenger>().WeepingAnglesButIneedToPee = true;
+        }
 
         if (chosenPessenger.GetComponentInChildren<EnemyNotAllowdToHunt>().IkStaNaastPlayer == true)
         {
@@ -108,6 +116,7 @@ public class PessengerBehaviour : MonoBehaviour
 
     public void StateMachine()
     {
+        timer++;
         PeeTimer++;
         VerkleinTimer++;
         if (PeeTimer > HowMuchPee || AllowdToPee == true)
@@ -126,13 +135,14 @@ public class PessengerBehaviour : MonoBehaviour
 
         if (WeepingAnglesActive == true)
         {
-            timer++;
             if (timer >= NewPassengerWillStandUpTime)
             {
+                Debug.Log("jaaaaa");
                 weepingAngles();
                 timer = 0;
             }
         }
+
 
 
         if (VerkleinTimer > StandUpReductionTime)
@@ -147,3 +157,4 @@ public class PessengerBehaviour : MonoBehaviour
 
 
 }
+ 

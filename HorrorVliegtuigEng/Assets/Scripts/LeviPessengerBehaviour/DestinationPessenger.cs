@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class DestinationPessenger : MonoBehaviour
 {
-    public TargetManagement TM;
 
     public PessengerBehaviour PB;
     public NavMeshAgent Passagier;
     public GameObject PassengerSeat;
-    public Transform PlayerTarget;
+    public GameObject PlayerTarget;
     public Transform Toilet;
+
 
 
     public GameObject Idle;
@@ -20,21 +20,16 @@ public class DestinationPessenger : MonoBehaviour
 
     public bool WalkToPlayer = false;
     public bool WeepingAnglesIsActive;
-    public bool Stop;
+    public bool WeepingAnglesButIneedToPee;
+    public bool DoneWithPee;
     public bool NeedToPee = false;
     public bool ToYourSeats;
-    public bool ImSitting;
+    public int GoingBackToWheepingafterWheepingTimer;
+    public int HowMuchPee;
 
-    public bool WeepingAnglesMagDoorGaan;
-    public bool YouNotAllowdToFollowYet;
     public bool YouAreSitting = false;
     public int peetimer;
-
-
-    int PositionCheckTimer;
-    int timer = 0;
-    bool resetTimer = false;
-
+    public Transform SittingDirection;
 
     // Start is called before the first frame update
     void Start()
@@ -46,18 +41,12 @@ public class DestinationPessenger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var Pessengerloc = PassengerSeat.transform.position;
-        var playerloc = PlayerTarget.position;
-        var toilet = Toilet.transform.position;
-
         WeepingAngles();
         ToiletDestination();
         ToyourSeats();
 
         Animaties();
-
-        PositionCheckTimer++;
-
+        WheepingAnglesButIneedToPee();
     }
 
     private void FixedUpdate()
@@ -68,16 +57,13 @@ public class DestinationPessenger : MonoBehaviour
     {
         if (WeepingAnglesIsActive == true)
         {
-
-
+            Debug.Log("imactive");
             if (WalkToPlayer == true)
             {
-
-                var playerloc = PlayerTarget.position;
+                var playerloc = PlayerTarget.transform.position;
                 Passagier.SetDestination(playerloc);
 
                 gameObject.GetComponent<NavMeshAgent>().isStopped = true;
-
             }
 
             if (WalkToPlayer == false)
@@ -102,18 +88,15 @@ public class DestinationPessenger : MonoBehaviour
         var toilet = Toilet.transform.position;
         if (NeedToPee == true)
         {
-            if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
-            {
-                Walking.active = true;
-                Idle.active = false;
-                Sitting.active = false;
-            }
             Passagier.SetDestination(Toilet.position);
             peetimer++;
 
-            if (peetimer > 10000)
+            if (peetimer > HowMuchPee)
             {
              Passagier.SetDestination(Pessengerloc);
+             HowMuchPee = 0;
+             DoneWithPee = true;
+             Debug.Log(PB.PeeCount);
              NeedToPee = false;
             }
         }
@@ -129,49 +112,76 @@ public class DestinationPessenger : MonoBehaviour
         }
     }
 
-    void InYourSeat()
+    void WheepingAnglesButIneedToPee()
     {
-     
+        if (WeepingAnglesButIneedToPee == true)
+        {
+            if (DoneWithPee == true)
+            {
+                GoingBackToWheepingafterWheepingTimer++;
+                if(GoingBackToWheepingafterWheepingTimer > 3000)
+                {
+                    WeepingAnglesIsActive = true;
+                }
+            }
+
+        }
     }
-
-
     void Animaties()
     {
+        Sitting.transform.LookAt(SittingDirection);
 
-    
 
-
-        if (GetComponent<NavMeshAgent>().velocity.x < 0.01)
+        if (WeepingAnglesIsActive == true)
         {
             Walking.active = false;
             Idle.active = true;
             Sitting.active = false;
         }
 
-        if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
+        if (WeepingAnglesIsActive == false)
         {
-            Walking.active = true;
-            Idle.active = false;
-            Sitting.active = false;
-        }
-
-        if (NeedToPee == true)
-        {
-            if (GetComponent<NavMeshAgent>().velocity.x < 0.01)
+            if (YouAreSitting == false)
             {
-                Walking.active = false;
-                Idle.active = true;
                 Sitting.active = false;
+
+                if (Passagier.velocity.sqrMagnitude == 0f)
+                {
+                    Walking.active = false;
+                    Idle.active = true;
+                    Sitting.active = false;
+                }
+                if (Passagier.velocity.sqrMagnitude > 0f)
+                {
+                    Walking.active = true;
+                    Idle.active = false;
+                    Sitting.active = false;
+                }
             }
 
-            if (GetComponent<NavMeshAgent>().velocity.x > 0.01)
+            if (YouAreSitting == false)
             {
-                Walking.active = true;
-                Idle.active = false;
-                Sitting.active = false;
+                if (GetComponent<NavMeshAgent>().velocity.x > 0.0001)
+                {
+                    Walking.active = true;
+                    Idle.active = false;
+                    Sitting.active = false;
+                }
+            }
+
+            if (YouAreSitting == true)
+            {
+
+                if (Passagier.velocity.sqrMagnitude == 0f)
+                {
+                    Walking.active = false;
+                    Idle.active = false;
+                    Sitting.active = true;
+                }
             }
 
         }
+
 
 
 
