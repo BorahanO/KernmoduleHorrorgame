@@ -26,6 +26,10 @@ public class PlayerController : MonoBehaviour
     public int usedPuffs;
     public TMP_Text maxPuffsTxt;
     public TMP_Text minPuffs;
+    [Space]
+
+    public AudioSource puff;
+    public AudioSource trash;
 
     private void Start()
     {
@@ -53,6 +57,7 @@ public class PlayerController : MonoBehaviour
             else if (Physics.Raycast(ray, out hit, range, trashMask))
             {
                 trashObject = hit.transform.parent.gameObject;
+                trash.Play();
                 trashObject.SetActive(false);
             }
             else if (Physics.Raycast(ray, out hit, range))
@@ -61,6 +66,7 @@ public class PlayerController : MonoBehaviour
                 {
                     behaviour.weepingAnglesStop();
                     usedPuffs++;
+                    puff.Play();
                 }
             }
         }
