@@ -8,6 +8,7 @@ public class StartConvo : MonoBehaviour
     public bool allowedToShow;
 
     public GameObject text;
+    public AudioSource mur;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class StartConvo : MonoBehaviour
     {
         if (!hasBeenShown && allowedToShow)
         {
+            mur.Play();
             text.SetActive(true);
             hasBeenShown = true;
             yield return new WaitForSeconds(2f);
