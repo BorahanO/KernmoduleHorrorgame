@@ -11,8 +11,14 @@ public class PickupObject : MonoBehaviour
     [SerializeField] private float PickupRange;
     public Rigidbody CurrentObject;
 
+    [SerializeField] private float scrollSpeed = 0.1f; // New variable for scroll speed adjustment
+
     void Update()
     {
+        // Scrolling input for adjusting PickupTarget position
+        float scrollInput = Input.GetAxis("Mouse ScrollWheel");
+        PickupTarget.position += PlayerCamera.transform.forward * scrollInput * scrollSpeed;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (CurrentObject)
@@ -43,6 +49,4 @@ public class PickupObject : MonoBehaviour
             CurrentObject.velocity = DirectionToPoint * 12f * DistanceToPoint;
         }
     }
-
-
 }
