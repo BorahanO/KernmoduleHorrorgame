@@ -32050,7 +32050,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: Night1
           m_BoolArgument: 0
@@ -35561,7 +35561,7 @@ PrefabInstance:
     - target: {fileID: 4980455253036563693, guid: 3acc09398765c0243be3d19f97a18f9c, type: 3}
       propertyPath: dialogueList.Array.data[1]
       value: "Welcome to the Aerocom application.<br> \"Synchronize and Elevate In-Flight
-        Communication with AeroComm!\" <br>You have \u201C3\u201D new messages. "
+        Communication with AeroComm!\" <br>You have \u201C1\u201D new messages. "
       objectReference: {fileID: 0}
     - target: {fileID: 4980455253036563693, guid: 3acc09398765c0243be3d19f97a18f9c, type: 3}
       propertyPath: dialogueList.Array.data[2]

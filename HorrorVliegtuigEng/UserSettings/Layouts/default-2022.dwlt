@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 608
+  controlID: 31611
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 540
+  controlID: 31612
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 541
+  controlID: 31613
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 1e670000
-      m_LastClickedID: 26398
-      m_ExpandedIDs: 2afbffff8e630000
+      m_SelectedIDs: 48e70400
+      m_LastClickedID: 0
+      m_ExpandedIDs: ac12feffc21dfeffe228feffee33feff063ffeff244afeff0055feff385efeff4868feff1072fefff87bfeff9c85feff768ffeff3299feffe2a2feff1aacfeff52b5fefff2befeffa6c8feffe2d1feffd8dbfeff34e5feffa6eefeff22f9feff5005ffffa81bffff202bffff5635ffff9e52ffffa0e3ffffceecffff2afbffffc89600006a9b0000d29b0000ea9d0000a6eb0400a8f00400c0f2040046b10500a6b4050048b6050060b8050082cf05001cd4050084d405009cd605008e1e0600ee21060090230600a825060010880600d88b0600388f0600ae900600da900600f2920600bc94060034b9060036be06004ec00600ca040700cc090700e40b07000623070008280700202a07007e5f07008064070098660700ba7d07001a810700bc820700d4840700f69b0700569f0700f8a0070010a3070032ba070034bf07004cc1070050c90700b0cc070052ce07006ad007006ed8070070dd070088df0700aaf60700acfb0700c4fd07000424080064270800062908001e2b0800
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -854,9 +854,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1099.9408, y: 700.25275, z: -18.1604}
+    m_Target: {x: 993.24457, y: 704.0048, z: 19.103485}
     speed: 2
-    m_Value: {x: 1099.9408, y: 700.25275, z: -18.1604}
+    m_Value: {x: 993.24457, y: 704.0048, z: 19.103485}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -902,13 +902,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.10316555, y: 0.08343794, z: -0.00859516, w: 0.9911208}
+    m_Target: {x: 0.03619662, y: 0.017968595, z: -0.00056178326, w: 0.9991831}
     speed: 2
-    m_Value: {x: -0.10316555, y: -0.08343794, z: 0.00859516, w: -0.99112076}
+    m_Value: {x: -0.036196616, y: -0.017968595, z: 0.0005617832, w: -0.9991831}
   m_Size:
-    m_Target: 759.9297
+    m_Target: 380.2175
     speed: 2
-    m_Value: 759.9297
+    m_Value: 380.2175
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1035,23 +1035,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scenes/FiveNights
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
   m_ViewMode: 1
   m_StartGridSize: 50
   m_LastFolders:
-  - Assets
+  - Assets/Scenes/FiveNights
   m_LastFoldersGridSize: 50
   m_LastProjectPath: C:\Users\jiska\KernmoduleHorrorgame\HorrorVliegtuigEng
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 16820000
-    m_LastClickedID: 33302
-    m_ExpandedIDs: 000000001682000000ca9a3bffffff7f
+    m_SelectedIDs: aa820000
+    m_LastClickedID: 33450
+    m_ExpandedIDs: 00000000168200006482000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1123,7 +1123,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1131,7 +1131,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 7.600006}
     m_GridSize: 50
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 237
@@ -1203,7 +1203,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 30620
+  m_LastSelectedObjectID: -59482
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
