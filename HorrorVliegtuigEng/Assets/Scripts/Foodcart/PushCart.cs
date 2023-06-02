@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushCart : MonoBehaviour
+public class PushPullObject : MonoBehaviour
 {
     [SerializeField] private LayerMask PushPullMask;
     [SerializeField] private Camera PlayerCamera;
@@ -44,11 +44,11 @@ public class PushCart : MonoBehaviour
     {
         if (isPushing && currentObject)
         {
-            currentObject.velocity = pushPullDirection * PushPullForce;
+            ApplyPushForce();
         }
         else if (isPulling && currentObject)
         {
-            currentObject.velocity = -pushPullDirection * PushPullForce;
+            ApplyPullForce();
         }
     }
 
@@ -58,8 +58,7 @@ public class PushCart : MonoBehaviour
         if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, PushPullRange, PushPullMask))
         {
             currentObject = hitInfo.rigidbody;
-            pushPullDirection = hitInfo.point - transform.position;
-            pushPullDirection.Normalize();
+            pushPullDirection = GetHorizontalDirection(hitInfo.point - transform.position);
             isPushing = true;
         }
     }
@@ -76,8 +75,7 @@ public class PushCart : MonoBehaviour
         if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, PushPullRange, PushPullMask))
         {
             currentObject = hitInfo.rigidbody;
-            pushPullDirection = hitInfo.point - transform.position;
-            pushPullDirection.Normalize();
+            pushPullDirection = GetHorizontalDirection(hitInfo.point - transform.position);
             isPulling = true;
         }
     }
@@ -86,5 +84,25 @@ public class PushCart : MonoBehaviour
     {
         currentObject = null;
         isPulling = false;
+    }
+
+    void ApplyPushForce()
+    {
+        Vector3 pushForce = pushPullDirection * PushPullForce;
+        pushForce.y = currentObject.velocity.y;
+        currentObject.velocity = pushForce;
+    }
+
+    void ApplyPullForce()
+    {
+        Vector3 pullForce = -pushPullDirection * PushPullForce;
+        pullForce.y = currentObject.velocity.y;
+        currentObject.velocity = pullForce;
+    }
+
+    Vector3 GetHorizontalDirection(Vector3 direction)
+    {
+        direction.y = 0f;
+        return direction.normalized;
     }
 }
