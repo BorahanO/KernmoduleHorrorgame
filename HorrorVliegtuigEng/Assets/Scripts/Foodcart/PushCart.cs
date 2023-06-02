@@ -9,8 +9,8 @@ public class PushPullObject : MonoBehaviour
     [SerializeField] private float PushPullRange;
     [SerializeField] private float PushPullForce;
     private Rigidbody currentObject;
-    private bool isPushing = false;
-    private bool isPulling = false;
+    public bool isPushing = false;
+    public bool isPulling = false;
     private Vector3 pushPullDirection;
 
     void Update()

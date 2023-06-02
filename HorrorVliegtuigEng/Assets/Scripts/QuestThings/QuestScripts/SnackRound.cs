@@ -9,7 +9,7 @@ public class SnackRound : MonoBehaviour
     public int stage;
     public Quest quest;
     public QuestManager manager;
-    public MakeCartFollow cart;
+    public PushPullObject cart;
 
     [Space]
     public TMP_Text minPassengers;
@@ -40,6 +40,19 @@ public class SnackRound : MonoBehaviour
             stage = quest.currentObjective;
             switch (stage)
             {
+                case 3:
+                    foreach (StartConvo convo in BusinessClass)
+                    {
+                        convo.allowedToShow = true;
+                        convoObject = convo.gameObject;
+                        exclamation = convoObject.transform.Find("Exclamation").gameObject;
+                        exclamation.SetActive(true);
+                    }
+                    if (cart.isPulling || cart.isPulling)
+                    {
+                        manager.advanceQuest(quest);
+                    }
+                    break;
                 case 0:
                     foreach (StartConvo convo in BusinessClass)
                     {
@@ -48,12 +61,6 @@ public class SnackRound : MonoBehaviour
                         exclamation = convoObject.transform.Find("Exclamation").gameObject;
                         exclamation.SetActive(true);
                     }
-                    if (cart.getPushCart())
-                    {
-                        manager.advanceQuest(quest);
-                    }
-                    break;
-                case 1:
                     passengerUI.SetActive(true);
                     maxPassengers.text = "10";
                     int temp = 0;
@@ -77,7 +84,7 @@ public class SnackRound : MonoBehaviour
                     }
                     manager.advanceQuest(quest);
                     break;
-                case 2:
+                case 1:
                     passengerUI.SetActive(false);
                     door.enabled = true;
                     foreach (StartConvo convo in EconomyClass)
@@ -88,7 +95,7 @@ public class SnackRound : MonoBehaviour
                         exclamation.SetActive(true);
                     }
                     break;
-                case 3:
+                case 2:
                     passengerUI.SetActive(true);
                     maxPassengers.text = "20";
                     int temp1 = 0;
