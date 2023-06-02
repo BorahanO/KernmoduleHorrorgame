@@ -8,8 +8,8 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: 3b1f5b4f9d54c4e4ab8b146a683b9c89
+  m_OcclusionCullingData: {fileID: 36300000, guid: efacc93c4a4d44a4bba72dc07ae4763e, type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -10834,7 +10834,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &406618933
 Transform:
@@ -17045,7 +17045,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh107176
+  m_Name: pb_Mesh340436
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -19630,7 +19630,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8393743737883735182, guid: 5fca0bdb92e24ed41ac36596c65c1ddf, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 127
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8513246836661162662, guid: 5fca0bdb92e24ed41ac36596c65c1ddf, type: 3}
       propertyPath: m_CastShadows
