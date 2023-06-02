@@ -606,6 +606,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1077006923}
+  mur: {fileID: 0}
 --- !u!1001 &9436347
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1292,6 +1293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &17144535
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1744,6 +1747,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &22712371
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2830,19 +2835,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 49665905}
   PassengerSeat: {fileID: 1294502187}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 293666995}
   Walking: {fileID: 1238507046}
   Sitting: {fileID: 1639154300}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -5196,6 +5205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &112663288
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5811,6 +5822,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &126029099
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8158,6 +8171,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &181163970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8510,6 +8525,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &191865814
 GameObject:
   m_ObjectHideFlags: 0
@@ -9874,7 +9890,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: /
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -9882,7 +9898,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9938,7 +9954,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &224195582
@@ -10354,6 +10370,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &231370241
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12043,7 +12061,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &279529139
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14168,7 +14185,7 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -14176,7 +14193,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14232,7 +14249,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &345938074
@@ -15535,7 +15552,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -15543,7 +15560,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15599,7 +15616,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &366612880
@@ -15820,7 +15837,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &375818750
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18119,7 +18135,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press R to rest.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -18127,7 +18143,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -18183,7 +18199,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &427325359
@@ -18582,6 +18598,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1370896280}
+  mur: {fileID: 0}
 --- !u!1001 &430883291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18789,7 +18806,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &432490519
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -19056,6 +19072,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &434075972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19712,6 +19730,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1077006923}
+  mur: {fileID: 0}
 --- !u!1 &455733389
 GameObject:
   m_ObjectHideFlags: 0
@@ -19791,6 +19810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &458981830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19940,6 +19961,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1077006923}
+  mur: {fileID: 0}
 --- !u!1 &463489112
 GameObject:
   m_ObjectHideFlags: 0
@@ -20190,6 +20212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &471035843
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20799,19 +20823,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 480142787}
   PassengerSeat: {fileID: 475500146}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1093820}
   Walking: {fileID: 1057923274}
   Sitting: {fileID: 1761292723}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -21651,7 +21679,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &493252593
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22161,6 +22188,7 @@ MonoBehaviour:
   offset: {x: 2, y: 0, z: 0}
   pushCart: 0
   readyToPush: 0
+  roll: {fileID: 0}
 --- !u!65 &499827938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23467,7 +23495,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 203.5769, y: -52}
+  m_AnchoredPosition: {x: 211, y: -52}
   m_SizeDelta: {x: 377.7538, y: 77.3466}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &524228330
@@ -23492,15 +23520,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Objective:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
+  m_sharedMaterial: {fileID: -3754132532029942140, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278255403
+  m_fontColor: {r: 0.16739488, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -23517,8 +23545,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23678,6 +23706,7 @@ MonoBehaviour:
   isQuestActive: 0
   currentObjective: 
   objectiveText: {fileID: 1083426148}
+  completeDay: {fileID: 0}
   fase3Quests:
   - {fileID: 11400000, guid: 1738839bbf6b93b4cac905efac98c0ac, type: 2}
   - {fileID: 11400000, guid: f32031b9a7be93649a93c5456ad57062, type: 2}
@@ -24370,7 +24399,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24378,7 +24407,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24434,7 +24463,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &554922270
@@ -24596,6 +24625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &558887711
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24823,7 +24854,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Night 1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24831,7 +24862,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -24887,7 +24918,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &561905321
@@ -26166,6 +26197,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &592475997
 GameObject:
   m_ObjectHideFlags: 0
@@ -26521,6 +26553,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &603776959
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27022,6 +27056,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &616930521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27499,7 +27535,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -28417,6 +28453,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &650992729
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28770,6 +28808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &656892811
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30914,6 +30954,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &700235302
 GameObject:
   m_ObjectHideFlags: 0
@@ -31046,6 +31087,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &701997815
 GameObject:
   m_ObjectHideFlags: 0
@@ -31094,6 +31136,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &701997818
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31637,6 +31681,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1370896280}
+  mur: {fileID: 0}
 --- !u!4 &717942198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2153553142232844427, guid: 81bcab239050d734584c3295b0906a5a, type: 3}
@@ -31822,7 +31867,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &719770400
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -32101,6 +32145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &728479300
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33161,6 +33207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &752993266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33604,19 +33652,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 767823526}
   PassengerSeat: {fileID: 1363354148}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1427404265}
   Walking: {fileID: 922985328}
   Sitting: {fileID: 268028622}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -34756,6 +34808,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &778799310
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35196,6 +35250,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1001 &791024970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35323,6 +35378,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1370896280}
+  mur: {fileID: 0}
 --- !u!1001 &796324201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36541,19 +36597,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 824593828}
   PassengerSeat: {fileID: 862039041}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1968859105}
   Walking: {fileID: 1442087629}
   Sitting: {fileID: 743662982}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -37129,6 +37189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &837736975
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -37278,6 +37340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &839333950
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -38471,7 +38535,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -38479,7 +38543,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -38535,7 +38599,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &865782017
@@ -39718,6 +39782,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &896368055
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39891,6 +39957,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1001 &900062481
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40539,6 +40606,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1001 &914579675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42417,6 +42485,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &960324945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43471,6 +43541,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1370896280}
+  mur: {fileID: 0}
 --- !u!1 &986079546
 GameObject:
   m_ObjectHideFlags: 0
@@ -43825,6 +43896,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1009392022
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44131,6 +44204,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &1015387732
 GameObject:
   m_ObjectHideFlags: 0
@@ -44321,7 +44395,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -44329,7 +44403,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -44385,7 +44459,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1018444333
@@ -44922,6 +44996,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1030806728
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46048,6 +46124,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &1057298798
 GameObject:
   m_ObjectHideFlags: 0
@@ -46523,15 +46600,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: I would like a snack please.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
+  m_sharedMaterial: {fileID: -3754132532029942140, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -46710,6 +46787,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1079739764
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46846,7 +46925,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 317.59998, y: -52}
+  m_AnchoredPosition: {x: 131, y: -133}
   m_SizeDelta: {x: 214.88348, y: 77.34198}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1083426148
@@ -46873,15 +46952,15 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
+  m_sharedMaterial: {fileID: -3754132532029942140, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278255400
+  m_fontColor: {r: 0.15719986, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -46898,8 +46977,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -46934,7 +47013,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -1471.0226, w: 0}
+  m_margin: {x: 0, y: 0, z: -253.30215, w: -268.6895}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -47743,6 +47822,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1077006923}
+  mur: {fileID: 0}
 --- !u!1 &1103855003
 GameObject:
   m_ObjectHideFlags: 0
@@ -48130,6 +48210,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1112973705
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -49067,7 +49149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1139618004
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -49953,19 +50034,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1163773198}
   PassengerSeat: {fileID: 1555528889}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 732638435}
   Walking: {fileID: 187013684}
   Sitting: {fileID: 1057298798}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -53575,6 +53660,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4229125740732136885, guid: 5fca0bdb92e24ed41ac36596c65c1ddf, type: 3}
   m_PrefabInstance: {fileID: 1266531609}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1267344959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267344960}
+  - component: {fileID: 1267344962}
+  - component: {fileID: 1267344961}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1267344960
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267344959}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1398022123}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -704.2881, y: 308.44168}
+  m_SizeDelta: {x: -1437.9762, y: -643.53674}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1267344961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267344959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1267344962
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267344959}
+  m_CullTransparentMesh: 1
 --- !u!1 &1273542162
 GameObject:
   m_ObjectHideFlags: 0
@@ -53864,19 +54025,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1276475697}
   PassengerSeat: {fileID: 191865814}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1346240596}
   Walking: {fileID: 2042008231}
   Sitting: {fileID: 1860720748}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -55014,6 +55179,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1302713277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55888,6 +56055,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1321263720
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56466,6 +56635,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1370896280}
+  mur: {fileID: 0}
 --- !u!1 &1339357614
 GameObject:
   m_ObjectHideFlags: 0
@@ -56514,6 +56684,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1339357617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -56632,6 +56804,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1001 &1342666854
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56969,6 +57142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1348971182
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -57456,7 +57631,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 0
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -57464,7 +57639,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -57520,7 +57695,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1362037721
@@ -57949,7 +58124,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: I would like a drink please
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -57957,7 +58132,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -58013,7 +58188,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1370896283
@@ -58366,6 +58541,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1391071084
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58483,7 +58660,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1391286355
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -58940,6 +59116,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1267344960}
   - {fileID: 524228329}
   - {fileID: 1083426147}
   - {fileID: 2001105625}
@@ -59036,6 +59213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1400442133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -59711,7 +59890,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -59719,7 +59898,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -59775,7 +59954,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1407751177
@@ -61405,6 +61584,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1458414139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63269,6 +63450,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1498028468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -63797,6 +63980,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1511612124
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -64248,6 +64433,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &1519387536
 GameObject:
   m_ObjectHideFlags: 0
@@ -64591,6 +64777,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &1529076919
 GameObject:
   m_ObjectHideFlags: 0
@@ -64651,7 +64838,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: puffs used
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -64659,7 +64846,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -64715,7 +64902,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1529076922
@@ -65635,19 +65822,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1549375612}
   PassengerSeat: {fileID: 1610518150}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1417583099}
   Walking: {fileID: 1633885879}
   Sitting: {fileID: 2130544949}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -66165,6 +66356,8 @@ MonoBehaviour:
   usedPuffs: 0
   maxPuffsTxt: {fileID: 865782016}
   minPuffs: {fileID: 554922269}
+  puff: {fileID: 0}
+  trash: {fileID: 0}
 --- !u!54 &1555449347
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -67021,6 +67214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1578573879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -67304,6 +67499,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &1595193804
 GameObject:
   m_ObjectHideFlags: 0
@@ -68069,6 +68265,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &1613847807
 GameObject:
   m_ObjectHideFlags: 0
@@ -68331,6 +68528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1627961928
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68761,6 +68960,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 625957009}
+  mur: {fileID: 0}
 --- !u!1 &1633885879
 GameObject:
   m_ObjectHideFlags: 0
@@ -68843,6 +69043,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1637609543
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69937,6 +70139,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1077006923}
+  mur: {fileID: 0}
 --- !u!1 &1662218494
 GameObject:
   m_ObjectHideFlags: 0
@@ -70495,6 +70698,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1676780635
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -71703,7 +71908,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: I would like a drink and a snack please.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -71711,7 +71916,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -71767,7 +71972,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1709341229
@@ -72049,6 +72254,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1370896280}
+  mur: {fileID: 0}
 --- !u!1 &1720479203
 GameObject:
   m_ObjectHideFlags: 0
@@ -73018,19 +73224,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1741395279}
   PassengerSeat: {fileID: 24933290}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1614089080}
   Walking: {fileID: 20095393}
   Sitting: {fileID: 1007735901}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -73520,7 +73730,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1751143359
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -73670,6 +73879,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1753479008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74629,19 +74840,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1774140535}
   PassengerSeat: {fileID: 1440729045}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 1144828127}
   Walking: {fileID: 235102261}
   Sitting: {fileID: 498812336}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -74767,7 +74982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1775804262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -74810,15 +75025,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: I lost my phone, can you help me find it?
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
+  m_sharedMaterial: {fileID: -3754132532029942140, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278255403
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -74835,8 +75050,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -74871,7 +75086,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -121.00354, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -75746,19 +75961,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 1155493778}
   Passagier: {fileID: 1794582445}
   PassengerSeat: {fileID: 1585196994}
   PlayerTarget: {fileID: 1555449343}
-  Toilet: {fileID: 264250934}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 414809917}
   Walking: {fileID: 393195319}
   Sitting: {fileID: 1285244016}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -76110,7 +76329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &1799347535
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -77824,6 +78042,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &1852711477
 GameObject:
   m_ObjectHideFlags: 0
@@ -79109,7 +79328,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: /
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -79117,7 +79336,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -79173,7 +79392,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1900647545
@@ -79348,6 +79567,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &1904642287
 GameObject:
   m_ObjectHideFlags: 0
@@ -80158,6 +80378,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1925567568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -80649,19 +80871,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d548209b654bbda4a926ce8d69f1aa0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TM: {fileID: 0}
   PB: {fileID: 0}
   Passagier: {fileID: 1937619979}
   PassengerSeat: {fileID: 0}
   PlayerTarget: {fileID: 0}
-  Toilet: {fileID: 0}
+  Toilet1: {fileID: 0}
+  Toilet2: {fileID: 0}
+  WalkingSound: {fileID: 0}
   Idle: {fileID: 0}
   Walking: {fileID: 0}
   Sitting: {fileID: 0}
   WalkToPlayer: 0
   WeepingAnglesIsActive: 0
+  WeepingAnglesButIneedToPee: 0
+  DoneWithPee: 0
   NeedToPee: 0
   ToYourSeats: 0
+  GoingBackToWheepingafterWheepingTimer: 0
   HowMuchPee: 2000
   YouAreSitting: 0
   peetimer: 0
@@ -82693,6 +82919,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &1997828449
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83032,7 +83260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2001105625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -83198,6 +83426,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &2005496836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83898,6 +84128,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1077006923}
+  mur: {fileID: 0}
 --- !u!1 &2018915612
 GameObject:
   m_ObjectHideFlags: 0
@@ -84403,7 +84634,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &2028038220
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -85256,7 +85486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IkStaNaastPlayer: 0
-  IkHebNaastThePlayerGestaan: 0
 --- !u!135 &2047161201
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -85998,6 +86227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   JijMagDood: 0
+  JijZietMijNiet: 0
+  dubbleCheck: 0
 --- !u!65 &2059501330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -86225,7 +86456,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Trash cleaned up:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -86233,7 +86464,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -86289,7 +86520,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2063173964
@@ -87513,6 +87744,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1775804261}
+  mur: {fileID: 0}
 --- !u!1 &2083030750
 GameObject:
   m_ObjectHideFlags: 0
@@ -88713,7 +88945,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Passengers Served:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24d8ad6194ba48b459d64a73253b666f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -88721,7 +88953,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0.16862746, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -88777,7 +89009,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &2119687805
@@ -89400,6 +89632,7 @@ MonoBehaviour:
   hasBeenShown: 0
   allowedToShow: 0
   text: {fileID: 1709341226}
+  mur: {fileID: 0}
 --- !u!1 &2145069151
 GameObject:
   m_ObjectHideFlags: 0
