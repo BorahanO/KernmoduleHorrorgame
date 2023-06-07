@@ -146,7 +146,7 @@ public class CleanRound : MonoBehaviour
                             {
                                 if (hit.transform.tag == "floorDirt")
                                 {
-                                    hit.transform.parent.gameObject.SetActive(false);
+                                    hit.transform.parent.parent.gameObject.SetActive(false);
                                 }
                             }
                         }
